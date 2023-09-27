@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webchatBlazor.Core", "webchatBlazor.Core\webchatBlazor.Core.csproj", "{9E25F966-5933-4AF0-9A2F-1E55E1A76C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webchatBlazor.Business", "webchatBlazor.Business\webchatBlazor.Business.csproj", "{6AC8D08B-D6F5-42B6-BFAD-6294B24EBA09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webchatBlazor.Data", "webchatBlazor.Data\webchatBlazor.Data.csproj", "{A7A28B02-5CB8-4399-A760-E5CDF41FDD46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webchatBlazor.Blazor", "webchatBlazor.Blazor\webchatBlazor.Blazor.csproj", "{21DA353D-81AB-4184-9230-FE86CB28E2F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E25F966-5933-4AF0-9A2F-1E55E1A76C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E25F966-5933-4AF0-9A2F-1E55E1A76C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E25F966-5933-4AF0-9A2F-1E55E1A76C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E25F966-5933-4AF0-9A2F-1E55E1A76C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC8D08B-D6F5-42B6-BFAD-6294B24EBA09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC8D08B-D6F5-42B6-BFAD-6294B24EBA09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC8D08B-D6F5-42B6-BFAD-6294B24EBA09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC8D08B-D6F5-42B6-BFAD-6294B24EBA09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A28B02-5CB8-4399-A760-E5CDF41FDD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A28B02-5CB8-4399-A760-E5CDF41FDD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A28B02-5CB8-4399-A760-E5CDF41FDD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A28B02-5CB8-4399-A760-E5CDF41FDD46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21DA353D-81AB-4184-9230-FE86CB28E2F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21DA353D-81AB-4184-9230-FE86CB28E2F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21DA353D-81AB-4184-9230-FE86CB28E2F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21DA353D-81AB-4184-9230-FE86CB28E2F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B9FA6CB-8F0C-4731-8399-D6AE1AA5F3E8}
+	EndGlobalSection
+EndGlobal
