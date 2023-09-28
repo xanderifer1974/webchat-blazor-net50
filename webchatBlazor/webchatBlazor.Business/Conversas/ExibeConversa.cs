@@ -1,5 +1,4 @@
-﻿using System;
-using webchatBlazor.Business.Conversas.Interfaces;
+﻿using webchatBlazor.Business.Conversas.Interfaces;
 using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
 
