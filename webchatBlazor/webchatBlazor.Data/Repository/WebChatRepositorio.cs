@@ -76,7 +76,7 @@ namespace webchatBlazor.Data.Repository
             }
             else
             {
-                chat = pesquisarPergunta(chat);
+                chat = PesquisarPergunta(chat);
 
             }
 
@@ -91,7 +91,7 @@ namespace webchatBlazor.Data.Repository
             return webChats.Where(x => x.Pergunta.ToLower().Contains(filter.ToLower()));
         }
 
-        private WebChat pesquisarPergunta(WebChat chat)
+        private WebChat PesquisarPergunta(WebChat chat)
         {
             var result = webChats.Where(e => e.Pergunta.ToUpper().Equals(chat.Pergunta.ToUpper())).FirstOrDefault();
             if (result != null)
