@@ -8,8 +8,4 @@
     <ProjectReference Include="..\webchatBlazor.Core\webchatBlazor.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interface\Repositorios\" />
-  </ItemGroup>
-
 </Project>
