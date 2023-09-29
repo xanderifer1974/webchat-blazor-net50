@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
@@ -14,29 +13,29 @@ namespace webchatBlazor.Data.Repository
         public WebChatRepositorio()
         {
             webChats = new List<WebChat>();
-            WebChat conversa1 = new WebChat(01, "01", $"<h6>Alterar Pacotes de Canais:</h6>" +
+            WebChat conversa1 = new(01, "01", $"<h6>Alterar Pacotes de Canais:</h6>" +
                        $"<ul><li>101 – Pacote Full</li>" +
                        $"<li>102 – Pacote Filmes</li>" +
                        $"<li>103 -  Pacote Básico</li>" +
                        $"</ul>");
-            WebChat conversa2 = new WebChat(2, "101", "Você escolheu o <b>Pacote Full</b>. Iremos providenciar a alteração.");
-            WebChat conversa3 = new WebChat(3, "102", "Você escolheu o <b>Pacote Filmes</b>. Iremos providenciar a alteração.");
-            WebChat conversa4 = new WebChat(4, "103", "Você escolheu o <b>Pacote Básico</b>. Iremos providenciar a alteração.");
-            WebChat conversa5 = new WebChat(5, "02", $"<h6>Alterar dados cadastrais:</h6>" +
+            WebChat conversa2 = new(2, "101", "Você escolheu o <b>Pacote Full</b>. Iremos providenciar a alteração.");
+            WebChat conversa3 = new(3, "102", "Você escolheu o <b>Pacote Filmes</b>. Iremos providenciar a alteração.");
+            WebChat conversa4 = new(4, "103", "Você escolheu o <b>Pacote Básico</b>. Iremos providenciar a alteração.");
+            WebChat conversa5 = new(5, "02", $"<h6>Alterar dados cadastrais:</h6>" +
                         $"<ul><li>201 – Nome</li>" +
                         $"<li>202 – RG</li>" +
                         $"<li>203 - CPF</li>" +
                         $"<li>204 - Telefone</li>" +
                         $"<li>205 - Endereço</li>" +
                         $"</ul>");
-            WebChat conversa6 = new WebChat(6, "201", "Você escolheu o <b> Alteração do Nome</b>.Iremos prosseguir com a alteração.");
-            WebChat conversa7 = new WebChat(7, "202", "Você escolheu o <b> Alteração do RG</b>.Iremos prosseguir com a alteração.");
-            WebChat conversa8 = new WebChat(8, "203", "Você escolheu o <b> Alteração do CPF</b>.Iremos prosseguir com a alteração.");
-            WebChat conversa9 = new WebChat(9, "204", "Você escolheu o <b> Alteração do Telefone</b>.Iremos prosseguir com a alteração.");
-            WebChat conversa10 = new WebChat(10, "205", "Você escolheu o <b> Alteração do Endereço</b>.Iremos prosseguir com a alteração.");
-            WebChat conversa11 = new WebChat(11, "Sim", "Iremos te encaminhar para um atendente, aguarde...");
-            WebChat conversa12 = new WebChat(12, "Não", "Obrigado por entrar em contato. Qualquer coisa, estamos a sua disposição.");
-            WebChat conversa13 = new WebChat(13, "Gostaria de atualizar os dados de cadastro.", "Favor nos enviar os dados em arquivo. ");
+            WebChat conversa6 = new(6, "201", "Você escolheu o <b> Alteração do Nome</b>.Iremos prosseguir com a alteração.");
+            WebChat conversa7 = new(7, "202", "Você escolheu o <b> Alteração do RG</b>.Iremos prosseguir com a alteração.");
+            WebChat conversa8 = new(8, "203", "Você escolheu o <b> Alteração do CPF</b>.Iremos prosseguir com a alteração.");
+            WebChat conversa9 = new(9, "204", "Você escolheu o <b> Alteração do Telefone</b>.Iremos prosseguir com a alteração.");
+            WebChat conversa10 = new(10, "205", "Você escolheu o <b> Alteração do Endereço</b>.Iremos prosseguir com a alteração.");
+            WebChat conversa11 = new(11, "Sim", "Iremos te encaminhar para um atendente, aguarde...");
+            WebChat conversa12 = new(12, "Não", "Obrigado por entrar em contato. Qualquer coisa, estamos a sua disposição.");
+            WebChat conversa13 = new(13, "Gostaria de atualizar os dados de cadastro.", "Favor nos enviar os dados em arquivo. ");
 
             webChats.Add(conversa1);
             webChats.Add(conversa2);
