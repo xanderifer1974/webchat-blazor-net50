@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\webchatBlazor.Business\webchatBlazor.Business.csproj" />
+    <ProjectReference Include="..\webchatBlazor.Core\webchatBlazor.Core.csproj" />
+    <ProjectReference Include="..\webchatBlazor.Data\webchatBlazor.Data.csproj" />
+  </ItemGroup>
+
+</Project>

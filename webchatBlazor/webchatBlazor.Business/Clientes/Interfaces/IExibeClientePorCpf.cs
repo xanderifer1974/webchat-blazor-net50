@@ -1,6 +1,6 @@
 ﻿using webchatBlazor.Core.Entities;
 
-namespace webchatBlazor.Business.Clientes
+namespace webchatBlazor.Business.Clientes.Interfaces
 {
     public interface IExibeClientePorCpf
     {
