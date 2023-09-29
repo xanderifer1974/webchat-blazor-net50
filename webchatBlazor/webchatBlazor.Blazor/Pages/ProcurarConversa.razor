@@ -1,0 +1,32 @@
+﻿@page "/conversa"
+
+<h3>Procurar Conversa</h3>
+
+@*Componente Procura*@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Pergunta</th>
+            <th>Resposta</th>
+            <th>Arquivo Anexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Conversas != null && Conversas.Count() > 0)
+        {
+            @foreach (var conversa in Conversas)
+            {
+                @*Componente Conversa*@
+            }
+        }
+        else
+        {
+            <tr>
+                <td id="nao-encontrado" colspan="4">
+                    Não foi possível encontrar a conversa
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
