@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webchatBlazor.Data", "webch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webchatBlazor.Blazor", "webchatBlazor.Blazor\webchatBlazor.Blazor.csproj", "{21DA353D-81AB-4184-9230-FE86CB28E2F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webchatBlazor.Service", "webChatBlazor.Service\webchatBlazor.Service.csproj", "{3A43883B-95FC-48E9-B7D7-10356FECBF41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webchatBlazor.Service", "webChatBlazor.Service\webchatBlazor.Service.csproj", "{3A43883B-95FC-48E9-B7D7-10356FECBF41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webchatBlazor.Util", "webchatBlazor.Util\webchatBlazor.Util.csproj", "{31B69797-86B6-4C79-9758-1C9D201D3721}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3A43883B-95FC-48E9-B7D7-10356FECBF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A43883B-95FC-48E9-B7D7-10356FECBF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A43883B-95FC-48E9-B7D7-10356FECBF41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B69797-86B6-4C79-9758-1C9D201D3721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B69797-86B6-4C79-9758-1C9D201D3721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B69797-86B6-4C79-9758-1C9D201D3721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B69797-86B6-4C79-9758-1C9D201D3721}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
