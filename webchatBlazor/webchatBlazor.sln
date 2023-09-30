@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webchatBlazor.Blazor", "web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webchatBlazor.Service", "webChatBlazor.Service\webchatBlazor.Service.csproj", "{3A43883B-95FC-48E9-B7D7-10356FECBF41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webchatBlazor.Util", "webchatBlazor.Util\webchatBlazor.Util.csproj", "{31B69797-86B6-4C79-9758-1C9D201D3721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webchatBlazor.Util", "webchatBlazor.Util\webchatBlazor.Util.csproj", "{31B69797-86B6-4C79-9758-1C9D201D3721}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
