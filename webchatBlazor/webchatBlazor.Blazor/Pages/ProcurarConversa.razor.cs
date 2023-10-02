@@ -7,6 +7,8 @@ namespace webchatBlazor.Blazor.Pages
 {
     public partial class ProcurarConversa
     {
+        
+
         [Inject]
         protected IWebChatService WebChatService {get;set;}
 
@@ -16,5 +18,11 @@ namespace webchatBlazor.Blazor.Pages
         {
             base.OnInitialized();
         }
+
+        private void HandlerSearch(string filter)
+        {
+            Conversas = WebChatService.BuscarConversas(filter);
+        }
+       
     }
 }
