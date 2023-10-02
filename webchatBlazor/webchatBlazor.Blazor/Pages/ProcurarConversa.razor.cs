@@ -17,6 +17,7 @@ namespace webchatBlazor.Blazor.Pages
         protected override void OnInitialized()
         {
             base.OnInitialized();
+            Conversas = WebChatService.BuscarConversas();
         }
 
         private void HandlerSearch(string filter)

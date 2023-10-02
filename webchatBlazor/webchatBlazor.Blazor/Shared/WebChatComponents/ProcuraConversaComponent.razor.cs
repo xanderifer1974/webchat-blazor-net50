@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace webchatBlazor.Blazor.Shared.WebChat
+namespace webchatBlazor.Blazor.Shared.WebChatComponents
 {
     public partial class ProcuraConversaComponent
     {

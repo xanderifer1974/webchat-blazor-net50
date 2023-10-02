@@ -1,0 +1,9 @@
+﻿@if(this.Conversa != null)
+{
+    <tr>
+        <td>@Conversa.IdChat</td>        
+        <td>@(new MarkupString(Conversa.Pergunta))</td>        
+        <td>@(new MarkupString(Conversa.Resposta))</td>
+        <td>@Conversa.ArquivoEmAnexo</td>
+    </tr>
+}

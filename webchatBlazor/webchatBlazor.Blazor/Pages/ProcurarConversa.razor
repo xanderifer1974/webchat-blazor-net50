@@ -3,7 +3,7 @@
 <h3>Procurar Conversa</h3>
 
 <ProcuraConversaComponent OnSearch="HandlerSearch"></ProcuraConversaComponent>
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>ID</th>
@@ -17,7 +17,7 @@
         {
             @foreach (var conversa in Conversas)
             {
-                @*Componente Conversa*@
+                <ConversaItemComponent Conversa="conversa"></ConversaItemComponent>
             }
         }
         else

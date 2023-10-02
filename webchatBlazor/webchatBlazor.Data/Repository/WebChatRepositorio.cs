@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
@@ -87,7 +88,7 @@ namespace webchatBlazor.Data.Repository
         {
             if (string.IsNullOrWhiteSpace(filter)) return webChats;
 
-            return webChats.Where(x => x.Pergunta.ToLower().Contains(filter.ToLower()));
+            return webChats.Where(x => x.IdChat == Int32.Parse(filter));
         }
 
         private WebChat PesquisarPergunta(WebChat chat)
