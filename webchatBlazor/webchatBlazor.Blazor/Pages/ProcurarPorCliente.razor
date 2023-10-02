@@ -2,7 +2,7 @@
 
 <h3>Procurar Cliente</h3>
 
-<ProcuraItemComponent OnSearch="HandlerSearch" TituloBotao="Procurar Cliente por Pergunta"></ProcuraItemComponent>
+<ProcuraItemComponent OnSearch="HandlerSearch" TituloBotao="Procurar Cliente por Nome"></ProcuraItemComponent>
 <table class="table">
     <thead>
         <tr>
@@ -18,7 +18,7 @@
         {
             @foreach (var cliente in Clientes)
             {
-               @* <ConversaItemComponent Conversa="conversa"></ConversaItemComponent>*@
+               <ClienteItemComponent Cliente="cliente"></ClienteItemComponent>
             }
         }
         else

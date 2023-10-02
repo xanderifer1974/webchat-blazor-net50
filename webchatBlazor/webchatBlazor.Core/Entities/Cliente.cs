@@ -21,5 +21,21 @@
         {
 
         }
+
+        public string DescricaoAtivo
+        {
+            get
+            {
+                return Ativo == true ? "Sim" : "Não";
+            }
+        }
+
+        public string CPFFormatado
+        {
+            get
+            {
+                return string.Format("{0:000\\.000\\.000\\-00}", Cpf);
+            }
+        }        
     }
 }

@@ -24,5 +24,14 @@
             Resposta = resposta;
             ArquivoEmAnexo = anexo;
         }
+
+        public string StatusArquivoEmAnexo
+
+        {
+            get
+            {
+                return ArquivoEmAnexo == true ? "Sim" : "Não";
+            }
+        }
     }
 }
