@@ -87,8 +87,8 @@ namespace webchatBlazor.Data.Repository
         public IEnumerable<WebChat> BuscarConversas(string filter = null)
         {
             if (string.IsNullOrWhiteSpace(filter)) return webChats;
-
-            return webChats.Where(x => x.IdChat == Int32.Parse(filter));
+            return webChats.Where(x => x.Pergunta.ToLower().Contains(filter.ToLower()));
+            //return webChats.Where(x => x.IdChat == Int32.Parse(filter));
         }
 
         private WebChat PesquisarPergunta(WebChat chat)
