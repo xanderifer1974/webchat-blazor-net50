@@ -5,15 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Shared\ClienteComponents\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\webchatBlazor.Business\webchatBlazor.Business.csproj" />
     <ProjectReference Include="..\webchatBlazor.Core\webchatBlazor.Core.csproj" />
     <ProjectReference Include="..\webchatBlazor.Data\webchatBlazor.Data.csproj" />
     <ProjectReference Include="..\webChatBlazor.Service\webchatBlazor.Service.csproj" />
     <ProjectReference Include="..\webchatBlazor.Util\webchatBlazor.Util.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Shared\ClienteComponents\" />
   </ItemGroup>
 
 </Project>

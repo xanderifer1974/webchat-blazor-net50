@@ -1,1 +1,33 @@
-﻿
+﻿@page "/cliente"
+
+<h3>Procurar Cliente</h3>
+
+<ProcuraItemComponent OnSearch="HandlerSearch" TituloBotao="Procurar Cliente por Pergunta"></ProcuraItemComponent>
+<table class="table">
+    <thead>
+        <tr>
+            <th>IdCliente</th>
+            <th>Cpf</th>
+            <th>NomeCompleto</th>
+            <th>Nome</th>
+            <th>Ativo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Clientes != null && Clientes.Count() > 0)
+        {
+            @foreach (var cliente in Clientes)
+            {
+               @* <ConversaItemComponent Conversa="conversa"></ConversaItemComponent>*@
+            }
+        }
+        else
+        {
+            <tr>
+                <td id="nao-encontrado" colspan="4">
+                    Não foi possível encontrar o cliente
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
