@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System;
 using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
 using webchatBlazor.Service.Interface;
@@ -15,6 +16,9 @@ namespace webchatBlazor.Blazor.Shared.WebChatComponents
         public string TituloChat { get; set; }
 
        private List<string> Mensagens {get; set;}
+
+
+       private string HoraMensagem { get; set; }
 
        public string mensagem = "";
 
@@ -33,6 +37,11 @@ namespace webchatBlazor.Blazor.Shared.WebChatComponents
                 WebChat chat = webChatService.BuscarConversaPorPergunta(mensagem);
                 Mensagens.Add($"API: {chat.Resposta}");
 
+                
+                DateTime agora = DateTime.Now;
+                string formatoPersonalizado = "HH:mm"; // HH para horas em formato de 24 horas e mm para minutos
+                string horaEMinuto = agora.ToString(formatoPersonalizado);
+                HoraMensagem = horaEMinuto;
                 mensagem = ""; // Limpar a caixa de entrada após o envio
             }
         }

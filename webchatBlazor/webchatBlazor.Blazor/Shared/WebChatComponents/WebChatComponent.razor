@@ -9,7 +9,16 @@
         <div class="chat-body">
             @foreach (var message in Mensagens)
             {
-                <div>@(new MarkupString(message))</div>           
+                <div id="mensagem-e-horario-resposta">
+                    <div class="message outgoing">
+                        <div class="message-content">
+                            <p>@(new MarkupString(message))</p>
+                        </div>
+                    </div>
+                    <div style="display: block; text-align: left;">
+                        <span class="message-timestamp">@HoraMensagem</span>
+                    </div>
+                </div>                              
             }
         </div>
         <div class="chat-input">
