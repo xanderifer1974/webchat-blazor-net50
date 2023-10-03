@@ -79,22 +79,19 @@ namespace webchatBlazor.Data.Repository
         public WebChat BuscarConversaPorPergunta(string pergunta)
         {
             WebChat chat = new WebChat();
-            chat.Pergunta = pergunta;
-            string nomeArquivo = "";
+            chat.Pergunta = pergunta;          
 
-            if (pergunta.StartsWith("Arquivo selecionado:"))
+            if (pergunta.StartsWith("Bom dia"))
             {
-                int indiceDoisPontos = pergunta.IndexOf(':');
+              
+                chat.Resposta = $"Funny: Bom dia! Favor informar somente os números do seu cpf sem os pontos e traços..";
 
-                if (indiceDoisPontos != -1 && indiceDoisPontos < pergunta.Length - 1)
-                {
-                    nomeArquivo = pergunta.Substring(indiceDoisPontos + 1).Trim();
-
-                }
-
-                chat.Pergunta = pergunta;
-                chat.Resposta = $"Funny: Recebemos o arquivo {nomeArquivo} com sucesso!";
-
+            }else if(pergunta.StartsWith("Boa tarde"))
+            {
+                chat.Resposta = $"Funny: Boa tarde! Favor informar somente os números do seu cpf sem os pontos e traços....";
+            }else if(pergunta.StartsWith("Boa noite"))
+            {
+                chat.Resposta = $"Funny: Boa noite! Favor informar somente os números do seu cpf sem os pontos e traços....";
             }
             else
             {
@@ -122,7 +119,7 @@ namespace webchatBlazor.Data.Repository
             }
             else
             {
-                chat.Resposta = "Funny: Opção escolhida inválida, deseja falar com um atendente?";
+                chat.Resposta = "Funny: Opção escolhida inválida, Favor informar somente seu CPF sem pontos e traços.";
                 return chat;
             }
 
