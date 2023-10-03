@@ -36,7 +36,7 @@ namespace webchatBlazor.Service
                 {
                     nome = cliente.Nome;
 
-                    resposta = $"<h6>Olá {nome}, escolha uma das opções abaixo.</h6>" +
+                    resposta = $"Funny: <h6>Olá <b>{nome}</b>, escolha uma das opções abaixo.</h6>" +
                         $"<ul><li>01 – Alterar pacote de canais</li>" +
                         $"<li>02 – Alterar dados cadastrais</li>" +
                         $"<li>03 – Solicitar um novo ponto</li>" +
@@ -50,7 +50,7 @@ namespace webchatBlazor.Service
                 }
                 else
                 {
-                    resposta = "Não encontramos seu CPF em nossas bases de cadastro. Favor informar um CPF válido.";
+                    resposta = "Funny: Não encontramos seu CPF em nossas bases de cadastro. Favor informar um CPF válido.";
                     webChat.Resposta = resposta;
                 }
 

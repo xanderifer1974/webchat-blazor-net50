@@ -13,9 +13,7 @@ namespace webchatBlazor.Blazor.Shared.WebChatComponents
 
 
         [Parameter]
-       public string TituloChat { get; set; }
-
-       //private List<string> Mensagens {get; set;}
+       public string TituloChat { get; set; }     
 
        private List<WebChat> ListaMensagens { get; set;}
 
@@ -26,8 +24,7 @@ namespace webchatBlazor.Blazor.Shared.WebChatComponents
 
         protected override void OnInitialized()
         {
-            base.OnInitialized();
-            //Mensagens = new List<string>();
+            base.OnInitialized();           
             ListaMensagens = new List<WebChat>();
         }
 
@@ -38,13 +35,8 @@ namespace webchatBlazor.Blazor.Shared.WebChatComponents
                 ListaMensagens.Add(new WebChat { Pergunta = $"Você: {mensagem}", InteracaoUsuario = true });            
                              
                 WebChat chat = webChatService.BuscarConversaPorPergunta(mensagem);
-                ListaMensagens.Add(chat);
-                                
-                //DateTime agora = DateTime.Now;
-                //string formatoPersonalizado = "HH:mm"; // HH para horas em formato de 24 horas e mm para minutos
-                //string horaEMinuto = agora.ToString(formatoPersonalizado);
-                //HoraMensagem = horaEMinuto;
-                mensagem = ""; // Limpar a caixa de entrada após o envio
+                ListaMensagens.Add(chat);   
+                mensagem = "";
             }
         }
     }
