@@ -34,9 +34,22 @@ namespace webchatBlazor.Data.Repository
             WebChat conversa8 = new(8, "203", "Funny: Você escolheu o <b> Alteração do CPF</b>.Iremos prosseguir com a alteração.");
             WebChat conversa9 = new(9, "204", "Funny: Você escolheu o <b> Alteração do Telefone</b>.Iremos prosseguir com a alteração.");
             WebChat conversa10 = new(10, "205", "Funny: Você escolheu o <b> Alteração do Endereço</b>.Iremos prosseguir com a alteração.");
-            WebChat conversa11 = new(11, "Sim", "Funny: Iremos te encaminhar para um atendente, aguarde...");
-            WebChat conversa12 = new(12, "Não", "Funny: Obrigado por entrar em contato. Qualquer coisa, estamos a sua disposição.");
-            WebChat conversa13 = new(13, "Funny: Gostaria de atualizar os dados de cadastro.", "Favor nos enviar os dados em arquivo. ");
+            WebChat conversa11 = new(11, "03", "Funny: Iremos enviar um técnico para a instalação do novo ponto.");
+            WebChat conversa12 = new(12, "04", $"Funny: <h6>Informe os seguintes dados para alterar endereço de assinatura:</h6>" +
+                        $"<ul>" +
+                        $"<li> => CEP do Novo Endereço</li>" +
+                        $"<li> => Número da Rua e Dados do Novo Endereço</li>" +
+                        $"<li> => Enviar o Comprovante de Residência</li>" +                       
+                        $"</ul>");
+            WebChat conversa13 = new(13, "Dados enviados.", "Funny: Endereço da assinatura alterado com sucesso!!");
+            WebChat conversa14 = new(14, "05", "Funny: Informe o mês e ano no seguinte formato {mm/yyyy}, para que possamos enviar a seguinda via");
+            WebChat conversa15 = new(15, "Mês e ano informados.", "Funny: A segunda via da fatura foi enviada para o e-mail cadastrado.");
+            WebChat conversa16 = new(16, "06", "Funny: Estaremos te encaminhando para um atendente do departamento financeiro. Favor aguardar");
+            WebChat conversa17 = new(17, "07", "Funny: Sua assinatura foi cancelada, enviaremos um e-mail com os dados de cancelamento");
+            WebChat conversa18 = new(18, "08", "Funny: Estaremos te encaminhando para algum atendente. Favor aguardar....");          
+            WebChat conversa19 = new(19, "Sim", "Funny: Iremos te encaminhar para um atendente, aguarde...");
+            WebChat conversa20 = new(20, "Não", "Funny: Obrigado por entrar em contato. Qualquer coisa, estamos a sua disposição.");
+           
 
             webChats.Add(conversa1);
             webChats.Add(conversa2);
@@ -51,6 +64,15 @@ namespace webchatBlazor.Data.Repository
             webChats.Add(conversa11);
             webChats.Add(conversa12);
             webChats.Add(conversa13);
+            webChats.Add(conversa14);
+            webChats.Add(conversa15);
+            webChats.Add(conversa16);
+            webChats.Add(conversa17);
+            webChats.Add(conversa18);
+            webChats.Add(conversa19);
+            webChats.Add(conversa20);
+          
+           
 
         }
 
