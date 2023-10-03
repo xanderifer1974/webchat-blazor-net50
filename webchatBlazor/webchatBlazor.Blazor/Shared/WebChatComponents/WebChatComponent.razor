@@ -7,24 +7,20 @@
             </div>
         </div>
         <div class="chat-body">
-            @foreach (var message in Mensagens)
+            @foreach (var mensagem in ListaMensagens)
             {
-                <div id="mensagem-e-horario-resposta">
-                    <div class="message outgoing">
-                        <div class="message-content">
-                            <p>@(new MarkupString(message))</p>
-                        </div>
-                    </div>
-                    <div style="display: block; text-align: left;">
-                        <span class="message-timestamp">@HoraMensagem</span>
-                    </div>
-                </div>                              
+                if (mensagem.InteracaoUsuario)
+                {
+                    <MensagemPerguntaComponent conversa="mensagem"></MensagemPerguntaComponent>
+                }else{
+                    <MensagemRespostaComponent conversa="mensagem"></MensagemRespostaComponent>
+                }                                  
             }
         </div>
         <div class="chat-input">
             <button id="file-input" class="attach-button"><i class="fas fa-paperclip"></i></button>
             <input id="mensagem" @bind="mensagem" type="text" placeholder="Envio sua mensangem...">
-            <button id="send-message" @onclick="SendMessage" class="send-button" ><i class="fas fa-paper-plane"></i></button>
+            <button id="send-message" @onclick="EnviarMensagem" class="send-button" ><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 </div>
