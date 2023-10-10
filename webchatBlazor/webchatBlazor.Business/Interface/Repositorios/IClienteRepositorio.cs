@@ -7,5 +7,8 @@ namespace webchatBlazor.Business.Interface.Repositorios
     {
         IEnumerable<Cliente> ListarClientes(string filter = null);
         Cliente BuscarClientePorCPF(long cpf);
+        void AdicionarCliente(Cliente cliente);
+        void AtualizarCliente(Cliente cliente);
+        void DeletarCliente(int id);
     }
 }
