@@ -76,14 +76,41 @@ namespace webchatBlazor.Data.Repository
 
         }
 
-        public void AdicionarConversa(WebChat conversa)
+        public bool AdicionarConversa(WebChat conversa)
         {
-            throw new NotImplementedException();
+            if (conversa != null)
+            {
+
+                webChats.Add(conversa);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public void AtualizarConversa(WebChat conversa)
+        public bool AtualizarConversa(WebChat conversaAtualizada)
         {
-            throw new NotImplementedException();
+            if (conversaAtualizada == null)
+            {
+                return false;
+            }
+
+            WebChat conversaExistente = webChats.FirstOrDefault(c => c.IdChat == conversaAtualizada.IdChat);
+
+            if (conversaExistente != null)
+            {
+                conversaExistente.Pergunta = conversaAtualizada.Pergunta;
+                conversaExistente.Resposta = conversaAtualizada.Resposta;
+                conversaExistente.Status = conversaAtualizada.Status;             
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public WebChat BuscarConversaPorPergunta(string pergunta)
@@ -120,9 +147,22 @@ namespace webchatBlazor.Data.Repository
            
         }
 
-        public void DeletarConversa(int id)
+        public bool DeletarConversa(int id)
         {
-            throw new NotImplementedException();
+
+            WebChat conversaParaDeletar = webChats.Find(c => c.IdChat == id);
+
+            if (conversaParaDeletar != null)
+            {
+
+                webChats.Remove(conversaParaDeletar);
+                return true;
+            }
+            else
+            {
+
+                return false;
+            }
         }
 
         private WebChat PesquisarPergunta(WebChat chat)

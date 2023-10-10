@@ -8,7 +8,7 @@ namespace webchatBlazor.Core.Entities
         public string NomeCliente { get; set; }
         public string Pergunta { get; set; }
         public string Resposta { get; set; }
-        public bool ArquivoEmAnexo { get; set; } = false;
+        public bool Status { get; set; } = false;
 
         public DateTime DataConversa { get; set; } = DateTime.Now;
 
@@ -32,21 +32,21 @@ namespace webchatBlazor.Core.Entities
             InteracaoUsuario = interacaoUsuario;
         }
 
-        public WebChat(int idChat, string pergunta, string resposta, bool anexo, bool interacaoUsuario)
+        public WebChat(int idChat, string pergunta, string resposta, bool statusConversa, bool interacaoUsuario)
         {
             IdChat = idChat;
             Pergunta = pergunta;
             Resposta = resposta;
             InteracaoUsuario = interacaoUsuario;
-            ArquivoEmAnexo = anexo;
+            Status = statusConversa;
         }
 
-        public string StatusArquivoEmAnexo
+        public string StatusConversa
 
         {
             get
             {
-                return ArquivoEmAnexo == true ? "Sim" : "Não";
+                return Status == true ? "Sim" : "Não";
             }
         }
 
