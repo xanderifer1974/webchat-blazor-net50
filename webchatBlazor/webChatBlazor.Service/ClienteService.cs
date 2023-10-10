@@ -7,15 +7,12 @@ namespace webchatBlazor.Service
 {
     public class ClienteService : IClienteService
     {
-        private readonly IExibeClientePorCpf _exibeClientePorCpf;
-        private readonly IListaClientes _listaClientes;
+        
         private readonly IClienteManager _clienteManager;
         
 
-        public ClienteService(IExibeClientePorCpf exibeClientePorCpf, IListaClientes listaClientes, IClienteManager clienteManager)
-        {
-            _exibeClientePorCpf = exibeClientePorCpf;
-            _listaClientes = listaClientes;
+        public ClienteService( IClienteManager clienteManager)
+        {           
             _clienteManager = clienteManager;
         }
 
@@ -31,7 +28,7 @@ namespace webchatBlazor.Service
 
         public Cliente BuscarClientePorCPF(long cpf)
         {
-            return _exibeClientePorCpf.BuscarClientePorCPF(cpf);
+            return _clienteManager.BuscarClientePorCPF(cpf);
         }
 
         public bool DeletarCliente(int id)
@@ -41,7 +38,7 @@ namespace webchatBlazor.Service
 
         public IEnumerable<Cliente> ListarClientes(string filter = null)
         {
-            return _listaClientes.ListarClientes(filter);
+            return _clienteManager.ListarClientes(filter);
         }
     }
 }

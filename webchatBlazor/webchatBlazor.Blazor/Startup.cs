@@ -29,15 +29,14 @@ namespace webchatBlazor.Blazor
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            //Services WebChat
             services.AddTransient<IWebChatService, WebChatService>();
-            services.AddTransient<IExibeConversa, ExibeConversa>();
-            services.AddTransient<IClienteManager, ClienteManager>();
             services.AddTransient<IConversaManager, ConversaManager>();
-            services.AddTransient<IProcuraConversa, ProcuraConversa>();
-            services.AddTransient<IClienteService,ClienteService>();
-            services.AddTransient<IExibeClientePorCpf,ExibeClientePorCpf>();
-            services.AddTransient<IListaClientes, ListaClientes>();
-            services.AddTransient<IWebChatRepositorio,WebChatRepositorio>();
+            services.AddTransient<IWebChatRepositorio, WebChatRepositorio>();
+
+            //Services Cliente
+            services.AddTransient<IClienteService, ClienteService>();
+            services.AddTransient<IClienteManager, ClienteManager>();
             services.AddTransient<IClienteRepositorio, ClienteRepositorio>();
 
         }

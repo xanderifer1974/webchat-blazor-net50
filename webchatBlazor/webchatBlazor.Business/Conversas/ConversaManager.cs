@@ -1,4 +1,6 @@
-﻿using webchatBlazor.Business.Conversas.Interfaces;
+﻿using System.Collections.Generic;
+using webchatBlazor.Business.Conversas.Interfaces;
+using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
 
 namespace webchatBlazor.Business.Conversas
@@ -24,6 +26,16 @@ namespace webchatBlazor.Business.Conversas
         public bool DeletarConversa(int id)
         {
             return _conversaManager.DeletarConversa(id);
+        }
+
+        public IEnumerable<WebChat> ProcuraConversa(string filter = null)
+        {
+            return _conversaManager.ProcuraConversa(filter);
+        }
+
+        public WebChat RealizaPergunta(string pergunta)
+        {
+            return _conversaManager.RealizaPergunta(pergunta);
         }
     }
 }

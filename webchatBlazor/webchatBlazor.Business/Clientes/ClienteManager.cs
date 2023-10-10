@@ -1,4 +1,5 @@
-﻿using webchatBlazor.Business.Clientes.Interfaces;
+﻿using System.Collections.Generic;
+using webchatBlazor.Business.Clientes.Interfaces;
 using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
 
@@ -22,9 +23,19 @@ namespace webchatBlazor.Business.Clientes
             return _clienteRepositorio.AtualizarCliente(clienteAtualizado);
         }
 
+        public Cliente BuscarClientePorCPF(long cpf)
+        {
+            return _clienteRepositorio.BuscarClientePorCPF(cpf);
+        }
+
         public bool DeletarCliente(int id)
         {
             return _clienteRepositorio.DeletarCliente(id);
+        }
+
+        public IEnumerable<Cliente> ListarClientes(string filter = null)
+        {
+            return _clienteRepositorio.ListarClientes(filter);
         }
     }
 }

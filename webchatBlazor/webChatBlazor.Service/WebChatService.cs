@@ -9,17 +9,15 @@ namespace webchatBlazor.Service
 {
     public class WebChatService : IWebChatService
     {
-        private readonly IExibeConversa _exibeConversa;
-        private readonly IProcuraConversa _procuraConversa;
-        private readonly IExibeClientePorCpf _exibeClientePorCpf;
+       
         private readonly IConversaManager _conversaManager;
+        private readonly IClienteManager _clienteManager;
 
-        public WebChatService(IExibeConversa exibeConversa, IProcuraConversa procuraConversa, IExibeClientePorCpf exibeClientePorCpf, IConversaManager conversaManager)
-        {
-            _exibeConversa = exibeConversa;
-            _procuraConversa = procuraConversa;
-            _exibeClientePorCpf = exibeClientePorCpf;
+        public WebChatService( IConversaManager conversaManager, IClienteManager cliente)
+        {       
+         
             _conversaManager = conversaManager;
+            _clienteManager = cliente;
 
         }
 
@@ -43,7 +41,7 @@ namespace webchatBlazor.Service
             if (Validacao.ValidarCPF(pergunta))
             {
                 long cpf = long.Parse(pergunta);
-                cliente = _exibeClientePorCpf.BuscarClientePorCPF(cpf);
+                cliente = _clienteManager.BuscarClientePorCPF(cpf);
 
                 if (cliente != null)
                 {
@@ -70,7 +68,7 @@ namespace webchatBlazor.Service
             }
             else
             {
-                webChat = _exibeConversa.RealizaPergunta(pergunta);
+                webChat = _conversaManager.RealizaPergunta(pergunta);
             }
 
             return webChat;
@@ -78,7 +76,7 @@ namespace webchatBlazor.Service
 
         public IEnumerable<WebChat> BuscarConversas(string filter = null)
         {
-           return _procuraConversa.ProcuraConversa(filter);
+           return _conversaManager.ProcuraConversa(filter);
         }
 
         public bool DeletarConversa(int id)

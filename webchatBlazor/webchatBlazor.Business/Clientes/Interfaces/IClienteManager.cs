@@ -1,4 +1,5 @@
-﻿using webchatBlazor.Core.Entities;
+﻿using System.Collections.Generic;
+using webchatBlazor.Core.Entities;
 
 namespace webchatBlazor.Business.Clientes.Interfaces
 {
@@ -7,6 +8,9 @@ namespace webchatBlazor.Business.Clientes.Interfaces
         bool AdicionarCliente(Cliente cliente);
         bool AtualizarCliente(Cliente clienteAtualizado);
         bool DeletarCliente(int id);
+
+        Cliente BuscarClientePorCPF(long cpf);
+        IEnumerable<Cliente> ListarClientes(string filter = null);
 
     }
 }

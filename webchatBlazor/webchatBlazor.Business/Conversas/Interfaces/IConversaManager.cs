@@ -1,4 +1,5 @@
-﻿using webchatBlazor.Core.Entities;
+﻿using System.Collections.Generic;
+using webchatBlazor.Core.Entities;
 
 namespace webchatBlazor.Business.Conversas.Interfaces
 {
@@ -7,5 +8,8 @@ namespace webchatBlazor.Business.Conversas.Interfaces
         bool AdicionarConversa(WebChat conversa);
         bool AtualizarConversa(WebChat conversaAtualizada);
         bool DeletarConversa(int id);
+
+        WebChat RealizaPergunta(string pergunta);
+        IEnumerable<WebChat> ProcuraConversa(string filter = null);
     }
 }
