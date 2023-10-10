@@ -76,6 +76,16 @@ namespace webchatBlazor.Data.Repository
 
         }
 
+        public void AdicionarConversa(WebChat conversa)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AtualizarConversa(WebChat conversa)
+        {
+            throw new NotImplementedException();
+        }
+
         public WebChat BuscarConversaPorPergunta(string pergunta)
         {
             WebChat chat = new WebChat();
@@ -108,6 +118,11 @@ namespace webchatBlazor.Data.Repository
             if (string.IsNullOrWhiteSpace(filter)) return webChats;
             return webChats.Where(x => x.Pergunta.ToLower().Contains(filter.ToLower()));
            
+        }
+
+        public void DeletarConversa(int id)
+        {
+            throw new NotImplementedException();
         }
 
         private WebChat PesquisarPergunta(WebChat chat)
