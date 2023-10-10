@@ -12,12 +12,25 @@ namespace webchatBlazor.Service
         private readonly IExibeConversa _exibeConversa;
         private readonly IProcuraConversa _procuraConversa;
         private readonly IExibeClientePorCpf _exibeClientePorCpf;
+        private readonly IConversaManager _conversaManager;
 
-        public WebChatService(IExibeConversa exibeConversa, IProcuraConversa procuraConversa, IExibeClientePorCpf exibeClientePorCpf)
+        public WebChatService(IExibeConversa exibeConversa, IProcuraConversa procuraConversa, IExibeClientePorCpf exibeClientePorCpf, IConversaManager conversaManager)
         {
             _exibeConversa = exibeConversa;
             _procuraConversa = procuraConversa;
             _exibeClientePorCpf = exibeClientePorCpf;
+            _conversaManager = conversaManager;
+
+        }
+
+        public bool AdicionarConversa(WebChat conversa)
+        {
+            return _conversaManager.AdicionarConversa(conversa);
+        }
+
+        public bool AtualizarConversa(WebChat conversaAtualizada)
+        {
+            return _conversaManager.AtualizarConversa(conversaAtualizada);
         }
 
         public WebChat BuscarConversaPorPergunta(string pergunta)
@@ -66,6 +79,11 @@ namespace webchatBlazor.Service
         public IEnumerable<WebChat> BuscarConversas(string filter = null)
         {
            return _procuraConversa.ProcuraConversa(filter);
+        }
+
+        public bool DeletarConversa(int id)
+        {
+           return _conversaManager.DeletarConversa(id);
         }
     }
 }

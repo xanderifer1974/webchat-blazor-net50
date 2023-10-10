@@ -31,6 +31,8 @@ namespace webchatBlazor.Blazor
             services.AddServerSideBlazor();
             services.AddTransient<IWebChatService, WebChatService>();
             services.AddTransient<IExibeConversa, ExibeConversa>();
+            services.AddTransient<IClienteManager, ClienteManager>();
+            services.AddTransient<IConversaManager, ConversaManager>();
             services.AddTransient<IProcuraConversa, ProcuraConversa>();
             services.AddTransient<IClienteService,ClienteService>();
             services.AddTransient<IExibeClientePorCpf,ExibeClientePorCpf>();
