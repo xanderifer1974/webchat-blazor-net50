@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using webchatBlazor.Business.Clientes.Interfaces;
 using webchatBlazor.Business.Conversas.Interfaces;
 using webchatBlazor.Core.Entities;
 using webchatBlazor.Service.Interface;
-using webchatBlazor.Util;
 
 namespace webchatBlazor.Service
 {
