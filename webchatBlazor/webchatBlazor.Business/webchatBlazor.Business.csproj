@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\webchatBlazor.Core\webchatBlazor.Core.csproj" />
+    <ProjectReference Include="..\webchatBlazor.Util\webchatBlazor.Util.csproj" />
   </ItemGroup>
 
 </Project>
