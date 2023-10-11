@@ -7,35 +7,35 @@ namespace webchatBlazor.Business.Conversas
 {
     public class ConversaManager : IConversaManager
     {
-        private readonly IConversaManager _conversaManager;
+        private readonly IWebChatRepositorio  _conversaRepositorio;
 
-        public ConversaManager(IConversaManager conversaManager)
+        public ConversaManager(IWebChatRepositorio conversaRepositorio)
         {
-                _conversaManager = conversaManager;
+            _conversaRepositorio = conversaRepositorio;
         }
         public bool AdicionarConversa(WebChat conversa)
         {
-           return _conversaManager.AdicionarConversa(conversa);
+           return _conversaRepositorio.AdicionarConversa(conversa);
         }
 
         public bool AtualizarConversa(WebChat conversaAtualizada)
         {
-            return _conversaManager.AdicionarConversa(conversaAtualizada);
+            return _conversaRepositorio.AdicionarConversa(conversaAtualizada);
         }
 
         public bool DeletarConversa(int id)
         {
-            return _conversaManager.DeletarConversa(id);
+            return _conversaRepositorio.DeletarConversa(id);
         }
 
         public IEnumerable<WebChat> ProcuraConversa(string filter = null)
         {
-            return _conversaManager.ProcuraConversa(filter);
+            return _conversaRepositorio.BuscarConversas(filter);
         }
 
         public WebChat RealizaPergunta(string pergunta)
         {
-            return _conversaManager.RealizaPergunta(pergunta);
+            return _conversaRepositorio.BuscarConversaPorPergunta(pergunta);
         }
     }
 }
