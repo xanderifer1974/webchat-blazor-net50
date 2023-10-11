@@ -12,6 +12,9 @@ namespace webchatBlazor.Blazor.Pages
         [Inject]
         protected IWebChatService WebChatService {get;set;}
 
+        [Inject]
+        protected NavigationManager NavigationManager { get;set;}
+
         private IEnumerable<WebChat> Conversas { get; set;}
 
         protected override void OnInitialized()
@@ -24,6 +27,11 @@ namespace webchatBlazor.Blazor.Pages
         {
             Conversas = WebChatService.BuscarConversas(filter);
         }
-       
+
+        private void BotaoLink(string link)
+        {
+            NavigationManager.NavigateTo(link);
+        }
+
     }
 }

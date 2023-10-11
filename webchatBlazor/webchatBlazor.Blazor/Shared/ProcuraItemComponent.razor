@@ -3,7 +3,10 @@
         <label for="filter">Procurar:&nbsp;</label>
         <input type="text" class="form-control" id="filter" @bind-value="filter" />
     </div>
-    <button type="button" class="btn btn-primary mb2" @onclick="HandleSearch">@TituloBotao</button>
+    <div class="form-group mx-sm-3 mb-2">
+        <button type="button" class="btn btn-primary mb2" @onclick="HandleSearch">@TituloBotao1</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-success mb2" @onclick="HandleSearch">@TituloBotao2</button>
+    </div>   
 </form>
 
 
