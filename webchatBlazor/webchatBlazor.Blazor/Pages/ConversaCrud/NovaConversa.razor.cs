@@ -29,6 +29,8 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
         protected void CriaConversa()
         {
             //Colocar a lógica de criação da conversa aqui.
+            // TODO >> Precisa fazer uma lógica para pegar o último id da conversa, e na hora de adicionar na lista deve ser somado + 1
+            // Em relação ao Status, fazer uma combox que aparece Ativo e Inativo, mas que grave na classe true ou false
         }
 
         protected void Cancela()
