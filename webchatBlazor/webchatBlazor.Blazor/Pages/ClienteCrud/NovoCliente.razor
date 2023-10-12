@@ -1,0 +1,37 @@
+﻿@page "/novocliente"
+
+<h3>Novo Cliente</h3>
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="CPF" class="control-label">CPF</label>
+                <input for="CPF" class="form-control" @bind="@Cliente.Cpf" />                
+            </div>
+            <div class="form-group">
+                <label for="NomeCompleto" class="control-label">Nome Completo</label>
+                <input for="NomeCompleto" class="form-control" @bind="@Cliente.NomeCompleto" />
+            </div>
+            <div class="form-group">
+                <label for="Nome" class="control-label">Nome</label>
+                <input for="Nome" class="form-control" @bind="@Cliente.Nome" />
+            </div>
+            <div class="form-group">
+                <label for="Status" class="control-label">Status</label>
+                <input for="Status" class="form-control" @bind="@Cliente.Ativo" />
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-success" @onclick="@CriarCliente" value="Salvar" />
+                <input type="button" class="btn btn-outline-danger" @onclick="@Cancela" value="Cancelar" />
+            </div>
+        </div>
+    </div>
+</form>
+
+

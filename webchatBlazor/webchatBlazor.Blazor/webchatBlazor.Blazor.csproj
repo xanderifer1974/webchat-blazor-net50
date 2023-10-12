@@ -12,8 +12,4 @@
     <ProjectReference Include="..\webchatBlazor.Util\webchatBlazor.Util.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\ClienteCrud\" />
-  </ItemGroup>
-
 </Project>
