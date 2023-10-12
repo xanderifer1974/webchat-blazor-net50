@@ -102,5 +102,12 @@ namespace webchatBlazor.Data.Repository
 
             return Clientes.Where(x => x.NomeCompleto.ToLower().Contains(filter.ToLower()));
         }
+
+        public List<string> ListarNomesClientes()
+        {
+            List<string> nomes  = new List<string>();
+            nomes = Clientes.Select(c => c.Nome).ToList();
+            return nomes;
+        }
     }
 }

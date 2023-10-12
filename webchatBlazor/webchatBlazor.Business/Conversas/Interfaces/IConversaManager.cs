@@ -11,5 +11,7 @@ namespace webchatBlazor.Business.Conversas.Interfaces
 
         WebChat RealizaPergunta(string pergunta);
         IEnumerable<WebChat> ProcuraConversa(string filter = null);
+
+        List<string> ListarNomesClientes();
     }
 }

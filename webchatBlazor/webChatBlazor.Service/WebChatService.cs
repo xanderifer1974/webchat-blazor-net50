@@ -41,5 +41,10 @@ namespace webchatBlazor.Service
         {
            return _conversaManager.DeletarConversa(id);
         }
+
+        public List<string> ListarNomesClientes()
+        {
+           return _conversaManager.ListarNomesClientes();
+        }
     }
 }

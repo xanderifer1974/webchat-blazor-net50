@@ -7,6 +7,7 @@ namespace webchatBlazor.Service.Interface
     {
         IEnumerable<WebChat> BuscarConversas(string filter = null);
         WebChat BuscarConversaPorPergunta(string pergunta);
+        List<string> ListarNomesClientes();
 
         bool AdicionarConversa(WebChat conversa);
         bool AtualizarConversa(WebChat conversaAtualizada);

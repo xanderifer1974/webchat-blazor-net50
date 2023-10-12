@@ -31,6 +31,11 @@ namespace webchatBlazor.Business.Conversas
             return _conversaRepositorio.DeletarConversa(id);
         }
 
+        public List<string> ListarNomesClientes()
+        {
+           return _clienteRepositorio.ListarNomesClientes();
+        }
+
         public IEnumerable<WebChat> ProcuraConversa(string filter = null)
         {
             return _conversaRepositorio.BuscarConversas(filter);
