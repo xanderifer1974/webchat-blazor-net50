@@ -26,12 +26,7 @@ namespace webchatBlazor.Blazor.Pages
         private void HandlerSearch(string filter)
         {
             Conversas = WebChatService.BuscarConversas(filter);
-        }
-
-        private void BotaoLink(string link)
-        {
-            NavigationManager.NavigateTo(link);
-        }
+        }      
 
     }
 }

@@ -8,25 +8,20 @@ namespace webchatBlazor.Blazor.Shared
         private string link;
 
         [Parameter]
-        public EventCallback<string> OnSearch { get; set; }
-
-        [Parameter] 
-        public EventCallback<string> OnInserir { get; set; }
+        public EventCallback<string> OnSearch { get; set; }            
 
         [Parameter]
         public string TituloBotao1{ get; set; }
 
         [Parameter]
-        public string TituloBotao2 { get; set; }
+        public string NomeBotaoLink { get; set; }
+
+        [Parameter]
+        public string NomeLink { get; set; }
 
         private void HandleSearch()
         {
             OnSearch.InvokeAsync(filter);
-        }
-
-        private void BotaoLink()
-        {
-          OnInserir.InvokeAsync(link);
-        }
+        }       
     }
 }
