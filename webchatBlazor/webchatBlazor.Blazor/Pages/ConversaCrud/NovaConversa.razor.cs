@@ -45,5 +45,18 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
         {
             NavigationManager.NavigateTo("/conversa");
         }
+
+        /* TODO - 13/10/2023 >
+         * 1 . Fazer a validação do formulário de inserção
+         * 2 . Criar o formulário de edição
+         * 3 . Linkar o formulário de edição com o ícone da lista
+         * 4 . Criar o método de edição
+         * 5.  Fazer a validação da edição
+         * 6.  Fazer o método de exclusão
+         * 7.  Fazer a validação da exclusão
+         * 8.  Criar pergunta se vai excluir
+         * 9.  Testar tudo para liberar a POC
+         * 
+         */
     }
 }
