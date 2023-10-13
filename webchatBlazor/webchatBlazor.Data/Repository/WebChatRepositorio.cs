@@ -80,6 +80,7 @@ namespace webchatBlazor.Data.Repository
         {
             if (conversa != null)
             {
+                conversa.IdChat = Util.Util.ObtemProximoId(webChats, x => x.IdChat);
 
                 webChats.Add(conversa);
                 return true;

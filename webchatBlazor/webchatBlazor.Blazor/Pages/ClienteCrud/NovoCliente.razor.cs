@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Components;
-using System;
 using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
 using webchatBlazor.Core.Enuns;
@@ -31,18 +30,10 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
         }
 
         protected void CriarCliente()
-        {
-            //Colocar a lógica de criação do cliente
-            if(Cliente == null)
-            {
-                Console.WriteLine("O cliente está nulo");
-            }
-            else
-            {
+        {         
+           
                 ClienteService.AdicionarCliente(Cliente);
-                NavigationManager.NavigateTo("/cliente");
-
-            }
+                NavigationManager.NavigateTo("/cliente");           
         }
 
         protected void Cancela()

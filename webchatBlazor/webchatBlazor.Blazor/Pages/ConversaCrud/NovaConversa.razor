@@ -7,7 +7,13 @@
         <div class="col-md-8">
             <div class="form-group">
                 <label for="NomeCliente" class="control-label">Nome Cliente</label>
-                <ComboxList Bind="@Conversa.NomeCliente"  Itens="@NomesClientes"></ComboxList>                
+                <select class="form-control" for="Status" @bind="@Conversa.NomeCliente">
+                    @foreach (var item in NomesClientes)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+                @*<ComboxList Bind="@Conversa.NomeCliente"  Itens="@NomesClientes"></ComboxList>        *@        
             </div>
             <div class="form-group">
                 <label for="Pergunta" class="control-label">Pergunta</label>
