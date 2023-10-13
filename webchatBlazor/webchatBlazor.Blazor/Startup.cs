@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Linq;
 using webchatBlazor.Business.Clientes;
 using webchatBlazor.Business.Conversas;
 using webchatBlazor.Business.Interface.Managers;
@@ -31,12 +32,12 @@ namespace webchatBlazor.Blazor
             //Services WebChat
             services.AddTransient<IWebChatService, WebChatService>();
             services.AddTransient<IConversaManager, ConversaManager>();
-            services.AddTransient<IWebChatRepositorio, WebChatRepositorio>();
+            services.AddSingleton<IWebChatRepositorio, WebChatRepositorio>();
 
             //Services Cliente
             services.AddTransient<IClienteService, ClienteService>();
             services.AddTransient<IClienteManager, ClienteManager>();
-            services.AddTransient<IClienteRepositorio, ClienteRepositorio>();
+            services.AddSingleton<IClienteRepositorio, ClienteRepositorio>();
 
         }
 

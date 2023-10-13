@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System;
 using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
 using webchatBlazor.Service.Interface;
@@ -16,7 +17,8 @@ namespace webchatBlazor.Blazor.Pages
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            Clientes = ClienteService.ListarClientes();
+            Clientes = ClienteService.ListarClientes();            
+
         }
 
         private void HandlerSearch(string filter)

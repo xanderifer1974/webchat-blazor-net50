@@ -1,4 +1,6 @@
-﻿namespace webchatBlazor.Core.Entities
+﻿using webchatBlazor.Core.Enuns;
+
+namespace webchatBlazor.Core.Entities
 {
     public class Cliente
     {
@@ -6,9 +8,9 @@
         public long Cpf { get; set; }
         public string NomeCompleto { get; set; }
         public string Nome { get; set; }
-        public bool Ativo { get; set; }
+        public EnunStatus Ativo { get; set; }
 
-        public Cliente(int idCliente, long cpf, string nomeCompleto, string nome, bool ativo)
+        public Cliente(int idCliente, long cpf, string nomeCompleto, string nome, EnunStatus ativo)
         {
             IdCliente = idCliente;
             Cpf = cpf;
@@ -20,15 +22,7 @@
         public Cliente()
         {
 
-        }
-
-        public string DescricaoAtivo
-        {
-            get
-            {
-                return Ativo == true ? "Sim" : "Não";
-            }
-        }
+        }       
 
         public string CPFFormatado
         {

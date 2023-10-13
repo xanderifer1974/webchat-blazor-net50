@@ -2,6 +2,7 @@
 using System.Linq;
 using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
+using webchatBlazor.Core.Enuns;
 
 namespace webchatBlazor.Data.Repository
 {
@@ -13,16 +14,16 @@ namespace webchatBlazor.Data.Repository
         {
             Clientes = new List<Cliente>();
 
-            Cliente Cliente1 = new(1, 21201141028, "Antonio Figueiredo de Oliveira", "Antonio", true);
-            Cliente Cliente2 = new(2, 28698103006, "Graziela Lopes Nunes", "Graziela", true);
-            Cliente Cliente3 = new(3, 31554257093, "Paulo Roberto Silva Santos", "Paulo Roberto", true);
-            Cliente Cliente4 = new(4, 72407118030, "João Paulo Martins", "João Paulo", true);
-            Cliente Cliente5 = new(5, 28432913057, "Amanda Bitencourt de Azevedo", "Amanda", true);
-            Cliente Cliente6 = new(6, 44831758078, "Simone Cury Machado", "Simone", true);
-            Cliente Cliente7 = new(7, 99588085012, "Gabriel Marcos Limeira", "Gabriel Marcos", true);
-            Cliente Cliente8 = new(8, 07982351018, "Rafael Pedreira de Souza", "Rafael", true);
-            Cliente Cliente9 = new(9, 03647631086, "Lucia das Neves Ferreira", "Lucia", true);
-            Cliente Cliente10 = new(10, 33391558016, "Ezequiel Medeiros Mendonza", "Ezequiel", true);
+            Cliente Cliente1 = new(1, 21201141028, "Antonio Figueiredo de Oliveira", "Antonio", EnunStatus.Ativo);
+            Cliente Cliente2 = new(2, 28698103006, "Graziela Lopes Nunes", "Graziela", EnunStatus.Ativo);
+            Cliente Cliente3 = new(3, 31554257093, "Paulo Roberto Silva Santos", "Paulo Roberto", EnunStatus.Ativo);
+            Cliente Cliente4 = new(4, 72407118030, "João Paulo Martins", "João Paulo", EnunStatus.Ativo);
+            Cliente Cliente5 = new(5, 28432913057, "Amanda Bitencourt de Azevedo", "Amanda", EnunStatus.Ativo);
+            Cliente Cliente6 = new(6, 44831758078, "Simone Cury Machado", "Simone", EnunStatus.Ativo);
+            Cliente Cliente7 = new(7, 99588085012, "Gabriel Marcos Limeira", "Gabriel Marcos", EnunStatus.Ativo);
+            Cliente Cliente8 = new(8, 07982351018, "Rafael Pedreira de Souza", "Rafael", EnunStatus.Ativo);
+            Cliente Cliente9 = new(9, 03647631086, "Lucia das Neves Ferreira", "Lucia", EnunStatus.Ativo);
+            Cliente Cliente10 = new(10, 33391558016, "Ezequiel Medeiros Mendonza", "Ezequiel", EnunStatus.Ativo);
 
             Clientes.Add(Cliente1);
             Clientes.Add(Cliente2);
