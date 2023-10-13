@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System;
 using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
+using webchatBlazor.Service.Interface;
 
 namespace webchatBlazor.Blazor.Pages.ClienteCrud
 {
@@ -12,6 +14,9 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
 
         [Inject]
         NavigationManager NavigationManager { get; set; }
+
+        [Inject]
+        IClienteService ClienteService { get; set; }
        
 
 
@@ -29,8 +34,16 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
         protected void CriarCliente()
         {
             //Colocar a lógica de criação do cliente
-            // TODO >> Precisa fazer uma lógica para pegar o último id do, e na hora de adicionar na lista deve ser somado + 1
-            // Em relação ao Status, fazer uma combox que aparece Ativo e Inativo, mas que grave na classe true ou false
+            if(Cliente == null)
+            {
+                Console.WriteLine("O cliente está nulo");
+            }
+            else
+            {
+                ClienteService.AdicionarCliente(Cliente);
+                NavigationManager.NavigateTo("/cliente");
+
+            }
         }
 
         protected void Cancela()
