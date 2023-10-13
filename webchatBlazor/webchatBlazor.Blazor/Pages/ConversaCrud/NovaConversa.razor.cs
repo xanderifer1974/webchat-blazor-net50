@@ -11,6 +11,8 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
 
         public List<string> NomesClientes { get; set; }
 
+        public Dictionary<bool, string> Status { get; set; }
+
         [Inject]
         NavigationManager NavigationManager { get; set; }
        
@@ -24,6 +26,9 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
             base.OnInitialized();
             Conversa = new WebChat();
             NomesClientes = ConversaService.ListarNomesClientes();
+            Status = new Dictionary<bool, string>();
+            Status.Add(true, "Ativo");
+            Status.Add(false, "Inativo");
         }
 
         protected void CriaConversa()

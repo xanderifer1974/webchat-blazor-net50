@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
 
 namespace webchatBlazor.Blazor.Pages.ClienteCrud
 {
     public partial class NovoCliente
     {
-        public Cliente Cliente { get; set; }       
+        public Cliente Cliente { get; set; }
+
+        public Dictionary<bool,string> Status { get; set; }
 
         [Inject]
         NavigationManager NavigationManager { get; set; }
@@ -16,6 +19,10 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
         {
             base.OnInitialized();
             Cliente = new Cliente();
+            Status = new Dictionary<bool, string>();
+            Status.Add(true, "Ativo");
+            Status.Add(false, "Inativo");           
+           
             
         }
 
