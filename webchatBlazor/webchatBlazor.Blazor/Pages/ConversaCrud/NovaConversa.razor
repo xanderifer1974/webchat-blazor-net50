@@ -20,12 +20,11 @@
             <div class="form-group">
                 <label for="Status" class="control-label">Status</label>
                 <select class="form-control"  for="Status" @bind="@Conversa.Status">
-                    @foreach (var item in Status)
+                    @foreach (var item in ListaStatus)
                     {
-                        <option value="@item.Key">@item.Value</option>
+                        <option value="@item">@item</option>
                     }
-                </select>
-                @*<input for="Preco" class="form-control" @bind="@Conversa.Status" />*@
+                </select>               
             </div>            
 
         </div>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
+using webchatBlazor.Core.Enuns;
 using webchatBlazor.Service.Interface;
 
 namespace webchatBlazor.Blazor.Pages.ConversaCrud
@@ -9,9 +10,9 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
     {
         public WebChat Conversa { get; set; }
 
-        public List<string> NomesClientes { get; set; }
+        public List<string> NomesClientes { get; set; }    
 
-        public Dictionary<bool, string> Status { get; set; }
+        public List<EnunStatus> ListaStatus { get; set; } = new List<EnunStatus>();
 
         [Inject]
         NavigationManager NavigationManager { get; set; }
@@ -25,10 +26,9 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
         {
             base.OnInitialized();
             Conversa = new WebChat();
-            NomesClientes = ConversaService.ListarNomesClientes();
-            Status = new Dictionary<bool, string>();
-            Status.Add(true, "Ativo");
-            Status.Add(false, "Inativo");
+            NomesClientes = ConversaService.ListarNomesClientes();           
+            ListaStatus.Add(EnunStatus.Ativo);
+            ListaStatus.Add(EnunStatus.Inativo);
         }
 
         protected void CriaConversa()
