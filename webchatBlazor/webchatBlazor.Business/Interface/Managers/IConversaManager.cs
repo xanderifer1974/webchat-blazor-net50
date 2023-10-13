@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
 
-namespace webchatBlazor.Business.Conversas.Interfaces
+namespace webchatBlazor.Business.Interface.Managers
 {
     public interface IConversaManager
     {
@@ -12,6 +12,6 @@ namespace webchatBlazor.Business.Conversas.Interfaces
         WebChat RealizaPergunta(string pergunta);
         IEnumerable<WebChat> ProcuraConversa(string filter = null);
 
-        List<string> ListarNomesClientes();
+        List<string> ComboxNomeCliente();
     }
 }

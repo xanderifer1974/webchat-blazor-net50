@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using webchatBlazor.Business.Clientes.Interfaces;
+using webchatBlazor.Business.Interface.Managers;
 using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
 

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using webchatBlazor.Business.Conversas.Interfaces;
+using webchatBlazor.Business.Interface.Managers;
 using webchatBlazor.Core.Entities;
 using webchatBlazor.Service.Interface;
 
@@ -44,7 +44,7 @@ namespace webchatBlazor.Service
 
         public List<string> ListarNomesClientes()
         {
-           return _conversaManager.ListarNomesClientes();
+           return _conversaManager.ComboxNomeCliente();
         }
     }
 }

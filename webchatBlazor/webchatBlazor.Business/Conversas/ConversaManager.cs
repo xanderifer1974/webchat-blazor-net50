@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using webchatBlazor.Business.Conversas.Interfaces;
+using webchatBlazor.Business.Interface.Managers;
 using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
 using webchatBlazor.Util;
@@ -31,7 +31,7 @@ namespace webchatBlazor.Business.Conversas
             return _conversaRepositorio.DeletarConversa(id);
         }
 
-        public List<string> ListarNomesClientes()
+        public List<string> ComboxNomeCliente()
         {
            return _clienteRepositorio.ListarNomesClientes();
         }

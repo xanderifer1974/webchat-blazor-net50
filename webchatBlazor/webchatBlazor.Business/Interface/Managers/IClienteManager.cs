@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
 
-namespace webchatBlazor.Business.Clientes.Interfaces
+namespace webchatBlazor.Business.Interface.Managers
 {
     public interface IClienteManager
     {
         bool AdicionarCliente(Cliente cliente);
         bool AtualizarCliente(Cliente clienteAtualizado);
         bool DeletarCliente(int id);
-        Cliente BuscarClientePorCPF(long cpf);       
+        Cliente BuscarClientePorCPF(long cpf);
         IEnumerable<Cliente> ListarClientes(string filter = null);
 
     }
