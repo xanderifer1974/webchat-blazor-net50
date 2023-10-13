@@ -1,4 +1,5 @@
 ﻿using System;
+using webchatBlazor.Core.Enuns;
 
 namespace webchatBlazor.Core.Entities
 {
@@ -8,7 +9,7 @@ namespace webchatBlazor.Core.Entities
         public string NomeCliente { get; set; }
         public string Pergunta { get; set; }
         public string Resposta { get; set; }
-        public bool Status { get; set; } = false;
+        public EnunStatus Status { get; set; } = EnunStatus.Ativo;
 
         public DateTime DataConversa { get; set; } = DateTime.Now;
 
@@ -32,23 +33,14 @@ namespace webchatBlazor.Core.Entities
             InteracaoUsuario = interacaoUsuario;
         }
 
-        public WebChat(int idChat, string pergunta, string resposta, bool statusConversa, bool interacaoUsuario)
+        public WebChat(int idChat, string pergunta, string resposta, EnunStatus statusConversa, bool interacaoUsuario)
         {
             IdChat = idChat;
             Pergunta = pergunta;
             Resposta = resposta;
             InteracaoUsuario = interacaoUsuario;
             Status = statusConversa;
-        }
-
-        public string StatusConversa
-
-        {
-            get
-            {
-                return Status == true ? "Sim" : "Não";
-            }
-        }
+        }       
 
         public string HoraComMinuto
         {

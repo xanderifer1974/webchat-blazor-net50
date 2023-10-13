@@ -8,7 +8,7 @@ namespace webchatBlazor.Core.Entities
         public long Cpf { get; set; }
         public string NomeCompleto { get; set; }
         public string Nome { get; set; }
-        public EnunStatus Ativo { get; set; }
+        public EnunStatus Ativo { get; set; } = EnunStatus.Ativo;
 
         public Cliente(int idCliente, long cpf, string nomeCompleto, string nome, EnunStatus ativo)
         {
