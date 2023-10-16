@@ -42,7 +42,7 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
         }
 
         /* TODO - 13/10/2023 >
-        * 1 . Fazer a validação do formulário de inserção
+        * 1 . Fazer a validação do formulário de inserção - OK > 16/10
         * 2 . Criar o formulário de edição
         * 3 . Linkar o formulário de edição com o ícone da lista
         * 4 . Criar o método de edição

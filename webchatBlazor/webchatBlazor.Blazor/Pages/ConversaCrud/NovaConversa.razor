@@ -1,48 +1,48 @@
 ﻿@page "/novaconversa"
 
 <h3>NovaConversa</h3>
-
-<form>
+<EditForm Model="@Conversa" OnValidSubmit="@CriaConversa">
+    <DataAnnotationsValidator />
     <div class="row">
         <div class="col-md-8">
             <div class="form-group">
                 <label for="NomeCliente" class="control-label">Nome Cliente</label>
-                <select class="form-control" for="Status" @bind="@Conversa.NomeCliente">
+                <InputSelect class="form-control" Id="Status" @bind-Value="@Conversa.NomeCliente">
                     @foreach (var item in NomesClientes)
                     {
                         <option value="@item">@item</option>
                     }
-                </select>
-                @*<ComboxList Bind="@Conversa.NomeCliente"  Itens="@NomesClientes"></ComboxList>        *@        
+                </InputSelect>
             </div>
             <div class="form-group">
                 <label for="Pergunta" class="control-label">Pergunta</label>
-                <input for="Pergunta" class="form-control" @bind="@Conversa.Pergunta" />
+                <InputText id="Pergunta" class="form-control" @bind-Value="@Conversa.Pergunta" />
+                <ValidationMessage For="@(() => Conversa.Pergunta)" />
             </div>
             <div class="form-group">
                 <label for="Resposta" class="control-label">Resposta</label>
-                <input for="Resposta" class="form-control" @bind="@Conversa.Resposta" />
+                <InputText id="Resposta" class="form-control" @bind-Value="@Conversa.Resposta" />
+                <ValidationMessage For="@(() => Conversa.Resposta)" />
             </div>
             <div class="form-group">
                 <label for="Status" class="control-label">Status</label>
-                <select class="form-control"  for="Status" @bind="@Conversa.Status">
+                <InputSelect class="form-control" id="Status" @bind-Value="@Conversa.Status">
                     @foreach (var item in ListaStatus)
                     {
                         <option value="@item">@item</option>
                     }
-                </select>               
-            </div>            
+                </InputSelect>
+            </div>
 
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <input type="button" class="btn btn-success" @onclick="@CriaConversa" value="Salvar" />
+                <input type="submit" class="btn btn-success"  value="Salvar" />
                 <input type="button" class="btn btn-outline-danger" @onclick="@Cancela" value="Cancelar" />
             </div>
         </div>
     </div>
-</form>
-
+</EditForm>
 

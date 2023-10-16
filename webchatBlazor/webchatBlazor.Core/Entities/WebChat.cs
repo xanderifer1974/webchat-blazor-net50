@@ -1,13 +1,17 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using webchatBlazor.Core.Enuns;
 
 namespace webchatBlazor.Core.Entities
 {
     public class WebChat
     {
-        public int IdChat { get; set; }
+        public int IdChat { get; set; }        
         public string NomeCliente { get; set; }
+
+        [Required(ErrorMessage = "O campo Pergunta  deve ser preenchido.")]
         public string Pergunta { get; set; }
+        [Required(ErrorMessage = "O campo Resposta  deve ser preenchido.")]
         public string Resposta { get; set; }
         public EnunStatus Status { get; set; } = EnunStatus.Ativo;
 

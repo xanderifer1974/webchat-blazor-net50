@@ -8,7 +8,7 @@ namespace webchatBlazor.Core.Entities
         public int IdCliente { get; set; }
 
         [Required(ErrorMessage = "O campo CPF deve ser preenchido.")]
-        [RegularExpression(@"^\d{11}$", ErrorMessage = "O CPF deve conter exatamente 11 dígitos.")]
+        [RegularExpression(@"^\d{10}|\d{11}$", ErrorMessage = "CPF inválido")]
         public long Cpf { get; set; }
 
         [Required(ErrorMessage = "O campo Nome Completo deve ser preenchido.")]
