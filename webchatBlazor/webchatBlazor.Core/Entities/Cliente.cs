@@ -1,12 +1,20 @@
-﻿using webchatBlazor.Core.Enuns;
+﻿using System.ComponentModel.DataAnnotations;
+using webchatBlazor.Core.Enuns;
 
 namespace webchatBlazor.Core.Entities
 {
     public class Cliente
     {
         public int IdCliente { get; set; }
+
+        [Required(ErrorMessage = "O campo CPF deve ser preenchido.")]
+        [RegularExpression(@"^\d{11}$", ErrorMessage = "O CPF deve conter exatamente 11 dígitos.")]
         public long Cpf { get; set; }
+
+        [Required(ErrorMessage = "O campo Nome Completo deve ser preenchido.")]
         public string NomeCompleto { get; set; }
+
+        [Required(ErrorMessage = "O campo Nome Completo deve ser preenchido.")]
         public string Nome { get; set; }
         public EnunStatus Ativo { get; set; } = EnunStatus.Ativo;
 
