@@ -65,7 +65,7 @@ namespace webchatBlazor.Data.Repository
             if (clienteExistente != null)
             {
                 clienteExistente.Nome = clienteAtualizado.Nome;
-                clienteExistente.Cpf = clienteAtualizado.Cpf;
+                clienteExistente.NomeCompleto = clienteAtualizado.NomeCompleto;
                 clienteExistente.Ativo = clienteAtualizado.Ativo;
 
                 return true;
