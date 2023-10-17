@@ -3,7 +3,7 @@ using webchatBlazor.Core.Enuns;
 
 namespace webchatBlazor.Core.Entities
 {
-    public class Cliente
+    public class Cliente: EntityBase
     {
         public int IdCliente { get; set; }
 

@@ -36,14 +36,21 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
 
             if (atualizacaoBemSucedida)
             {
-                MensagemAtualizacao = $"Cliente {Cliente.IdCliente} - {Cliente.Nome} Atualizado com sucesso!";
-                NavigationManager.NavigateTo("/cliente");
+                Cliente.Alert.Mensagem = $"Cliente {Cliente.IdCliente} - {Cliente.Nome} Atualizado com sucesso!";
+                Cliente.Alert.Tipo = EnumAlert.Success;
+                Cliente.Alert.UrlRedirect = "/cliente";
+                Cliente.Alert.Titulo = "Sucesso";
+                Cliente.Alert.ShowModal();
+                StateHasChanged();
             }
             else  
             {
-               
-                MensagemAtualizacao = "Ocorreu um erro ao atualizar o cliente";
-                NavigationManager.NavigateTo("/cliente");
+                Cliente.Alert.Mensagem = "Ocorreu um erro ao atualizar o cliente";
+                Cliente.Alert.Tipo = EnumAlert.Danger;
+                Cliente.Alert.UrlRedirect = "/cliente";
+                Cliente.Alert.Titulo = "Erro";
+                Cliente.Alert.ShowModal();
+                StateHasChanged();
             }
         }       
 

@@ -1,0 +1,18 @@
+﻿<div class="modal @Model.ModalClasse" id="modal-alerta" style="display:@Model.Display" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header alert-@Model.Tipo.ToString().ToLower()">
+                <h5 class="modal-title" id="staticBackdropLabel">@Model.Titulo</h5>
+                <button type="button" class="btn-close" @onclick="() => CloseModal()" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"> @Model.Mensagem </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" @onclick="() => CloseModal()"
+                        data-bs-dismiss="modal">
+                    Fechar                
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

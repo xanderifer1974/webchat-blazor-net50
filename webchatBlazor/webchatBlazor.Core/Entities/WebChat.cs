@@ -4,7 +4,7 @@ using webchatBlazor.Core.Enuns;
 
 namespace webchatBlazor.Core.Entities
 {
-    public class WebChat
+    public class WebChat: EntityBase
     {
         public int IdChat { get; set; }        
         public string NomeCliente { get; set; }
