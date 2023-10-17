@@ -11,10 +11,10 @@ namespace webchatBlazor.Core.Entities
         [RegularExpression(@"^\d{10}|\d{11}$", ErrorMessage = "CPF inválido")]
         public long Cpf { get; set; }
 
-        [Required(ErrorMessage = "O campo Nome Completo deve ser preenchido.")]
+        [Required(ErrorMessage = "O Nome completo deve ser preenchido.")]
         public string NomeCompleto { get; set; }
 
-        [Required(ErrorMessage = "O campo Nome Completo deve ser preenchido.")]
+        [Required(ErrorMessage = "O Nome deve ser preenchido.")]
         public string Nome { get; set; }
         public EnunStatus Ativo { get; set; } = EnunStatus.Ativo;
 
