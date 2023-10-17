@@ -31,6 +31,11 @@ namespace webchatBlazor.Service
             return _clienteManager.BuscarClientePorCPF(cpf);
         }
 
+        public Cliente BuscarClientePorId(int id)
+        {
+            return _clienteManager.BuscarClientePorId(id);
+        }
+
         public bool DeletarCliente(int id)
         {
             return _clienteManager.DeletarCliente(id);

@@ -28,6 +28,11 @@ namespace webchatBlazor.Business.Clientes
             return _clienteRepositorio.BuscarClientePorCPF(cpf);
         }
 
+        public Cliente BuscarClientePorId(int id)
+        {
+            return _clienteRepositorio.BuscarClientePorId(id);
+        }
+
         public bool DeletarCliente(int id)
         {
             return _clienteRepositorio.DeletarCliente(id);

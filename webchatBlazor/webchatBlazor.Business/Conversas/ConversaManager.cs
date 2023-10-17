@@ -82,8 +82,11 @@ namespace webchatBlazor.Business.Conversas
             }
 
             return webChat;
-        }   
+        }
 
-       
+        public WebChat BuscarConversaPorId(int id)
+        {
+            return _conversaRepositorio.BuscarConversaPorId(id);
+        }
     }
 }

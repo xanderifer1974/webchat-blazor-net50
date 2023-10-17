@@ -81,6 +81,11 @@ namespace webchatBlazor.Data.Repository
             return Clientes.FirstOrDefault(c => c.Cpf == cpf);
         }
 
+        public Cliente BuscarClientePorId(int id)
+        {
+            return Clientes.FirstOrDefault(c => c.IdCliente == id);
+        }
+
         public bool DeletarCliente(int id)
         {
             Cliente clienteParaDeletar = Clientes.Find(c => c.IdCliente == id);

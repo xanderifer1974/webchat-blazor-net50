@@ -47,15 +47,16 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
         }
 
         /* TODO - 13/10/2023 >
-         * 1 . Fazer a validação do formulário de inserção
+         * 1 . Fazer a validação do formulário de inserção - OK
          * 2 . Criar o formulário de edição
-         * 3 . Linkar o formulário de edição com o ícone da lista
-         * 4 . Criar o método de edição
-         * 5.  Fazer a validação da edição
-         * 6.  Fazer o método de exclusão
-         * 7.  Fazer a validação da exclusão
-         * 8.  Criar pergunta se vai excluir
-         * 9.  Testar tudo para liberar a POC
+         * 3 . Criar método para pesquisar conversa por id
+         * 4 . Linkar o formulário de edição com o ícone da lista
+         * 5 . Criar o método de edição
+         * 6.  Fazer a validação da edição
+         * 7.  Fazer o método de exclusão
+         * 8.  Fazer a validação da exclusão
+         * 9.  Criar pergunta se vai excluir
+         * 10.  Testar tudo para liberar a POC
          * 
          */
     }

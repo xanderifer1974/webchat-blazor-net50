@@ -27,6 +27,11 @@ namespace webchatBlazor.Service
             return _conversaManager.AtualizarConversa(conversaAtualizada);
         }
 
+        public WebChat BuscarConversaPorId(int id)
+        {
+            return _conversaManager.BuscarConversaPorId(id);
+        }
+
         public WebChat BuscarConversaPorPergunta(string pergunta)
         {
            return _conversaManager.RealizaPergunta(pergunta);

@@ -12,6 +12,8 @@ namespace webchatBlazor.Business.Interface.Managers
         WebChat RealizaPergunta(string pergunta);
         IEnumerable<WebChat> ProcuraConversa(string filter = null);
 
+        WebChat BuscarConversaPorId(int id);
+
         List<string> ComboxNomeCliente();
     }
 }

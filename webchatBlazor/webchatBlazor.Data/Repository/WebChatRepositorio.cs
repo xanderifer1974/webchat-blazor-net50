@@ -114,6 +114,11 @@ namespace webchatBlazor.Data.Repository
             }
         }
 
+        public WebChat BuscarConversaPorId(int id)
+        {
+            return webChats.FirstOrDefault(c => c.IdChat == id);
+        }
+
         public WebChat BuscarConversaPorPergunta(string pergunta)
         {
             WebChat chat = new WebChat();
