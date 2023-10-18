@@ -47,17 +47,21 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
         }
 
         /* TODO - 13/10/2023 >
-         * 1 . Fazer a validação do formulário de inserção - OK
-         * 2 . Criar o formulário de edição
-         * 3 . Criar método para pesquisar conversa por id
-         * 4 . Linkar o formulário de edição com o ícone da lista
-         * 5 . Criar o método de edição
-         * 6.  Fazer a validação da edição
-         * 7.  Fazer o método de exclusão
-         * 8.  Fazer a validação da exclusão
-         * 9.  Criar pergunta se vai excluir
-         * 10.  Testar tudo para liberar a POC
-         * 
+        * 1 . Fazer a validação do formulário de inserção - OK > 16/10
+        * 2 . Criar o formulário de edição 
+         * 3 . Criar método para pesquisar conversa por id 
+         * 4 . Linkar o formulário de edição com o ícone da lista 
+         * 5 . Criar o método de edição  
+         * 6.  Fazer a validação da edição 
+         * 7.  Criar a modal de edição 
+         * 8.  Fazer o método de exclusão
+         * 9.  Fazer a validação da exclusão
+         * 10.  Criar pergunta se vai excluir
+         * 11.  Testar tudo para liberar a POC
+         * -------
+         * Exemplo para a modal de exclusão
+         * https://getbootstrap.com/docs/5.0/components/modal/
+         * Vai precisar alterar o componente modal, para colocar o botão com o método de exclusão.
          */
     }
 }
