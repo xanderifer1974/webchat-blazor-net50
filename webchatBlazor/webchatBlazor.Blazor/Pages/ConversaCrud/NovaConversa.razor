@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="Resposta" class="control-label">Resposta</label>
-                <InputText id="Resposta" class="form-control" @bind-Value="@Conversa.Resposta" />
+                <InputTextArea id="Resposta" class="form-control" @bind-Value="@Conversa.Resposta" rows="4" />
                 <ValidationMessage For="@(() => Conversa.Resposta)" />
             </div>
             <div class="form-group">
@@ -45,4 +45,6 @@
         </div>
     </div>
 </EditForm>
+
+<AlertComponent Model="@Conversa.Alert"></AlertComponent>
 

@@ -37,7 +37,13 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
         protected void CriaConversa()
         {
            WebChatService.AdicionarConversa(Conversa);
-           NavigationManager.NavigateTo("/conversa");
+           Conversa.Alert.Mensagem = $"Conversa Id: {Conversa.IdChat} referente a pergunta:{Conversa.Pergunta} inserida com sucesso!";
+           Conversa.Alert.Tipo = EnumAlert.Success;
+           Conversa.Alert.UrlRedirect = "/conversa";
+           Conversa.Alert.Titulo = "Sucesso";
+           Conversa.Alert.ShowModal();
+           StateHasChanged();
+
 
         }
 

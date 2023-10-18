@@ -38,7 +38,7 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
 
             if (atualizacaoBemSucedida)
             {
-                Conversa.Alert.Mensagem = $"Conversa Id: {Conversa.IdChat} Pergunta:{Conversa.Pergunta} Atualizada com sucesso!";
+                Conversa.Alert.Mensagem = $"Conversa Id: {Conversa.IdChat} referente a pergunta:{Conversa.Pergunta} atualizada com sucesso!";
                 Conversa.Alert.Tipo = EnumAlert.Success;
                 Conversa.Alert.UrlRedirect = "/conversa";
                 Conversa.Alert.Titulo = "Sucesso";

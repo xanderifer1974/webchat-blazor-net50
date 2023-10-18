@@ -34,7 +34,7 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
 
             if (atualizacaoBemSucedida)
             {
-                Cliente.Alert.Mensagem = $"Cliente {Cliente.IdCliente} - {Cliente.Nome} Atualizado com sucesso!";
+                Cliente.Alert.Mensagem = $"Cliente {Cliente.IdCliente} - {Cliente.Nome} atualizado com sucesso!";
                 Cliente.Alert.Tipo = EnumAlert.Success;
                 Cliente.Alert.UrlRedirect = "/cliente";
                 Cliente.Alert.Titulo = "Sucesso";               
