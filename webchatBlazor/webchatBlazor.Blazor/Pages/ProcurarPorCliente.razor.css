@@ -28,4 +28,5 @@ tr:hover {
 #nao-encontrado {
     color: red;
     font-weight: bold;
+    text-align: center;
 }
