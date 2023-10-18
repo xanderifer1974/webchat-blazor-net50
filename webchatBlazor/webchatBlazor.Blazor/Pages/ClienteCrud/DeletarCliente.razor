@@ -1,0 +1,27 @@
+﻿
+@page "/deletarcliente/{id:int}"
+
+<h4>Deseja deletar este cliente com Id : <b>@id</b></h4>
+<br />
+<div class="col-md-8">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>CPF</th>
+            <td>@Cliente.CPFFormatado</td>
+        </tr>
+        <tr>
+            <th>Nome</th>
+            <td>@Cliente.NomeCompleto</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>@Cliente.Ativo</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <button type="button" class="btn btn-danger" @onclick="@ExcluirCliente">Deletar</button>
+        <button type="button" class="btn btn-warning" @onclick="@Cancela">Cancelar</button>
+    </div>
+</div>
+
+<AlertComponent Model="@Cliente.Alert"></AlertComponent>

@@ -60,5 +60,7 @@ namespace webchatBlazor.Blazor.Pages.ConversaCrud
         {
             NavigationManager.NavigateTo("/conversa");
         }
+
+
     }
 }
