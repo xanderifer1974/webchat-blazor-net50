@@ -1,7 +1,8 @@
-﻿@page "/novaconversa"
+﻿@page "/editarConversa/{id:int}"
 
-<h3>NovaConversa</h3>
-<EditForm Model="@Conversa" OnValidSubmit="@CriaConversa">
+<h3>EditarConversa</h3>
+
+<EditForm Model="@Conversa" OnValidSubmit="@AtualizarConversa">
     <DataAnnotationsValidator />
     <div class="row">
         <div class="col-md-8">
@@ -27,7 +28,7 @@
             <div class="form-group">
                 <label for="Status" class="control-label">Status</label>
                 <InputSelect class="form-control" id="Status" @bind-Value="@Conversa.Status">
-                    @foreach (var item in ListaStatus)
+                    @foreach (var item in Status)
                     {
                         <option value="@item">@item</option>
                     }
@@ -39,10 +40,13 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <input type="submit" class="btn btn-success"  value="Salvar" />
+                <input type="submit" class="btn btn-success" value="Salvar" />
                 <input type="button" class="btn btn-outline-danger" @onclick="@Cancela" value="Cancelar" />
             </div>
         </div>
     </div>
 </EditForm>
+
+<AlertComponent Model="@Conversa.Alert"></AlertComponent>
+
 

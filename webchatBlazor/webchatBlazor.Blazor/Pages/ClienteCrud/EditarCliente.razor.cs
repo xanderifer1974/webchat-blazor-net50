@@ -19,9 +19,7 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
 
         public Cliente Cliente { get; set; }
 
-        public List<EnunStatus> Status { get; set; } = new List<EnunStatus>();
-
-        public string MensagemAtualizacao { get; set; }
+        public List<EnunStatus> Status { get; set; } = new List<EnunStatus>();      
 
         protected override void OnInitialized()
         {

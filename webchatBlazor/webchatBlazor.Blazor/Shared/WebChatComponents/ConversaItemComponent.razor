@@ -5,7 +5,8 @@
         <td>@(new MarkupString(Conversa.Pergunta))</td>        
         <td>@(new MarkupString(Conversa.Resposta))</td>
         <td>@Conversa.Status</td>
-        <td><span class="oi oi-pencil" aria-hidden="true"></span></td>
+        <td><a href='/editarConversa/@Conversa.IdChat'><span class="oi oi-pencil" aria-hidden="true"></span></a></td>
         <td><span class="oi oi-trash" aria-hidden="true"></span></td>
     </tr>
 }
+
