@@ -33,11 +33,23 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
         protected void CriarCliente()
         {         
            
-                ClienteService.AdicionarCliente(Cliente);
+            bool clienteCadastrado = ClienteService.AdicionarCliente(Cliente);
+
+            if(clienteCadastrado)
+            {
                 Cliente.Alert.Mensagem = $"Cliente {Cliente.IdCliente} - {Cliente.Nome} adicionado com sucesso!";
                 Cliente.Alert.Tipo = EnumAlert.Success;
                 Cliente.Alert.UrlRedirect = "/cliente";
-                Cliente.Alert.Titulo = "Sucesso";
+                Cliente.Alert.Titulo = "Cliente Cadastrado";
+            }
+            else
+            {
+                Cliente.Alert.Mensagem = $"Erro ao cadastro o cliente  {Cliente.Nome}!";
+                Cliente.Alert.Tipo = EnumAlert.Danger;
+                Cliente.Alert.UrlRedirect = "/cliente";
+                Cliente.Alert.Titulo = "Erro ao  cadastrar o cliente";
+            }
+               
                 Cliente.Alert.ShowModal();
                 StateHasChanged();                    
         }

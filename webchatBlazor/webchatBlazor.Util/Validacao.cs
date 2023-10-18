@@ -1,4 +1,6 @@
-﻿namespace webchatBlazor.Util
+﻿using System.Text.RegularExpressions;
+
+namespace webchatBlazor.Util
 {
     public static class Validacao
     {
@@ -66,6 +68,38 @@
 
             return true;
 
+        }
+
+        public static bool ValidarCPFFake(string vrCPF)
+        {
+            string valor = vrCPF.Replace(".", "");
+            valor = valor.Replace("-", "");
+
+           if(Regex.IsMatch(valor, @"^\d+$"))
+            {
+                if (valor.Length == 11 || valor.Length == 10)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }                    
+            }
+            else
+            {
+                return true;
+            }               
+                   
+
+        }
+
+        public static string RetirarPontosETracosCPF(string vrCPF)
+        {
+            string valor = vrCPF.Replace(".", "");
+            valor = valor.Replace("-", "");
+
+            return valor;
         }
     }
 }

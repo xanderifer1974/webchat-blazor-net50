@@ -39,7 +39,8 @@ namespace webchatBlazor.Data.Repository
         }
 
         public bool AdicionarCliente(Cliente cliente)
-        {
+        {           
+
             if (cliente != null)
             {
                 cliente.IdCliente = Util.Util.ObtemProximoId(Clientes, x => x.IdCliente);
