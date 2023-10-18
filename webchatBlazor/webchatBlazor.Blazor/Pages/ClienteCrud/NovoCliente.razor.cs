@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using System;
 using System.Collections.Generic;
 using webchatBlazor.Core.Entities;
 using webchatBlazor.Core.Enuns;
@@ -33,7 +34,12 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
         {         
            
                 ClienteService.AdicionarCliente(Cliente);
-                NavigationManager.NavigateTo("/cliente");           
+                Cliente.Alert.Mensagem = $"Cliente {Cliente.IdCliente} - {Cliente.Nome} adicionado com sucesso!";
+                Cliente.Alert.Tipo = EnumAlert.Success;
+                Cliente.Alert.UrlRedirect = "/cliente";
+                Cliente.Alert.Titulo = "Sucesso";
+                Cliente.Alert.ShowModal();
+                StateHasChanged();                    
         }
 
         protected void Cancela()
@@ -57,6 +63,7 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
          * Exemplo para a modal de exclusão
          * https://getbootstrap.com/docs/5.0/components/modal/
          * Vai precisar alterar o componente modal, para colocar o botão com o método de exclusão.
-         */
+         */    
+
     }
 }
