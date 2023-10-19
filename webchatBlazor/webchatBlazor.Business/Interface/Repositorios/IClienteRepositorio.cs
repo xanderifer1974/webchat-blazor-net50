@@ -6,7 +6,7 @@ namespace webchatBlazor.Business.Interface.Repositorios
     public interface IClienteRepositorio
     {
         IEnumerable<Cliente> ListarClientes(string filter = null);
-        Cliente BuscarClientePorCPF(long cpf);
+        Cliente BuscarClientePorCPF(string cpf);
         Cliente BuscarClientePorId(int id);
         List<string> ListarNomesClientes();
         bool AdicionarCliente(Cliente cliente);

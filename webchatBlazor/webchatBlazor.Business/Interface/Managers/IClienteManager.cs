@@ -8,7 +8,7 @@ namespace webchatBlazor.Business.Interface.Managers
         bool AdicionarCliente(Cliente cliente);
         bool AtualizarCliente(Cliente clienteAtualizado);
         bool DeletarCliente(int id);
-        Cliente BuscarClientePorCPF(long cpf);
+        Cliente BuscarClientePorCPF(string cpf);
         Cliente BuscarClientePorId(int id);
         IEnumerable<Cliente> ListarClientes(string filter = null);
 

@@ -8,7 +8,7 @@
         <div class="col-md-8">
             <div class="form-group">
                 <label for="CPF" class="control-label">CPF</label>
-                <InputNumber id="cpf"  class="form-control" @bind-Value="@Cliente.Cpf" />
+                <InputText id="cpf"  class="form-control" @bind-Value="@Cliente.Cpf" maxlength="11" />
                 <ValidationMessage For="@(() => Cliente.Cpf)" />               
             </div>
             <div class="form-group">

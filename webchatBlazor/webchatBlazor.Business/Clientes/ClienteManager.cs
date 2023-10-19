@@ -23,7 +23,7 @@ namespace webchatBlazor.Business.Clientes
             return _clienteRepositorio.AtualizarCliente(clienteAtualizado);
         }
 
-        public Cliente BuscarClientePorCPF(long cpf)
+        public Cliente BuscarClientePorCPF(string cpf)
         {
             return _clienteRepositorio.BuscarClientePorCPF(cpf);
         }

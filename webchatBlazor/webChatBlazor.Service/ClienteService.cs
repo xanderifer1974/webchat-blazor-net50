@@ -26,7 +26,7 @@ namespace webchatBlazor.Service
             return _clienteManager.AtualizarCliente(clienteAtualizado);
         }
 
-        public Cliente BuscarClientePorCPF(long cpf)
+        public Cliente BuscarClientePorCPF(string cpf)
         {
             return _clienteManager.BuscarClientePorCPF(cpf);
         }

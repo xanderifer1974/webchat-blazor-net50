@@ -9,7 +9,7 @@ namespace webchatBlazor.Core.Entities
 
         [Required(ErrorMessage = "O campo CPF deve ser preenchido.")]
         [RegularExpression(@"^(?:\d{11}|\d{10})$", ErrorMessage = "CPF inválido")]
-        public long Cpf { get; set; }
+        public string Cpf { get; set; }
 
         [Required(ErrorMessage = "O Nome completo deve ser preenchido.")]
         public string NomeCompleto { get; set; }
@@ -18,7 +18,7 @@ namespace webchatBlazor.Core.Entities
         public string Nome { get; set; }
         public EnunStatus Ativo { get; set; } = EnunStatus.Ativo;
 
-        public Cliente(int idCliente, long cpf, string nomeCompleto, string nome, EnunStatus ativo)
+        public Cliente(int idCliente, string cpf, string nomeCompleto, string nome, EnunStatus ativo)
         {
             IdCliente = idCliente;
             Cpf = cpf;
@@ -36,7 +36,8 @@ namespace webchatBlazor.Core.Entities
         {
             get
             {
-                return string.Format("{0:000\\.000\\.000\\-00}", Cpf);
+                long cpfFormat = long.Parse(Cpf);
+                return string.Format("{0:000\\.000\\.000\\-00}", cpfFormat);
             }
         }        
     }

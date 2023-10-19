@@ -55,8 +55,8 @@ namespace webchatBlazor.Business.Conversas
                 {
                     string cpfSemFormatacao = Validacao.RetirarPontosETracosCPF(pergunta);
 
-                    long cpf = long.Parse(cpfSemFormatacao);
-                    cliente = _clienteRepositorio.BuscarClientePorCPF(cpf);
+                   
+                    cliente = _clienteRepositorio.BuscarClientePorCPF(cpfSemFormatacao);
 
                     if (cliente != null)
                     {
