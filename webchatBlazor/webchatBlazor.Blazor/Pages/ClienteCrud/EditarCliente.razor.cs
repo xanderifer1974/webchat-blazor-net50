@@ -15,7 +15,7 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
         public IClienteService ClienteService { get; set; }
 
         [Parameter]
-        public int Id{ get; set; }
+        public int id{ get; set; }
 
         public Cliente Cliente { get; set; }
 
@@ -23,7 +23,7 @@ namespace webchatBlazor.Blazor.Pages.ClienteCrud
 
         protected override void OnInitialized()
         {
-            Cliente = ClienteService.BuscarClientePorId(Id);
+            Cliente = ClienteService.BuscarClientePorId(id);
             Status.Add(EnunStatus.Ativo);
             Status.Add(EnunStatus.Inativo);
         }
