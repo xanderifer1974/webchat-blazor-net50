@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using webchatBlazor.Business.Interface.Repositorios;
 using webchatBlazor.Core.Entities;
 
@@ -9,38 +10,50 @@ namespace webchatBlazor.Data.Repository
     public class WebChatRepositorio : IWebChatRepositorio
     {
 
-        private List<WebChat> webChats;
+        private List<WebChat> webChats;        
+        
 
         public WebChatRepositorio()
         {
+           StringBuilder resposta1 = new StringBuilder();
+            resposta1.AppendLine("Funny: <h6>Alterar Pacotes de Canais:</h6>");
+            resposta1.AppendLine("<ul><li>101 – Pacote Full</li>");
+            resposta1.AppendLine("<li>102 – Pacote Filmes</li>");
+            resposta1.AppendLine("<li>103 -  Pacote Básico</li>");
+            resposta1.AppendLine("</ul>");
+
+            StringBuilder resposta2 = new StringBuilder();
+            resposta2.AppendLine("Funny: <h6>Alterar dados cadastrais:</h6>");
+            resposta2.AppendLine("<ul><li>201 – Nome</li>");
+            resposta2.AppendLine("<li>202 – RG</li>");
+            resposta2.AppendLine("<li>203 - CPF</li>");
+            resposta2.AppendLine("<li>204 - Telefone</li>");
+            resposta2.AppendLine("<li>205 - Endereço</li>");
+            resposta2.AppendLine("</ul>");
+
+            StringBuilder resposta3 = new StringBuilder();
+            resposta3.AppendLine("Funny: <h6>Informe os seguintes dados para alterar endereço de assinatura:</h6 >");
+            resposta3.AppendLine("<ul>");
+            resposta3.AppendLine("<li> 401 - CEP do Novo Endereço</li>");
+            resposta3.AppendLine("<li> 402 - Número da Rua e Dados do Novo Endereço</li>");
+            resposta3.AppendLine("<li> 403 - Enviar o Comprovante de Residência</li>");
+            resposta3.AppendLine("</ul>"); 
+
+
+
             webChats = new List<WebChat>();
-            WebChat conversa1 = new(01, "01", $"Funny: <h6>Alterar Pacotes de Canais:</h6>" +
-                       $"<ul><li>101 – Pacote Full</li>" +
-                       $"<li>102 – Pacote Filmes</li>" +
-                       $"<li>103 -  Pacote Básico</li>" +
-                       $"</ul>");
+            WebChat conversa1 = new(01, "01", resposta1.ToString());
             WebChat conversa2 = new(2, "101", "Funny: Você escolheu o <b>Pacote Full</b>. Iremos providenciar a alteração.");
             WebChat conversa3 = new(3, "102", "Funny: Você escolheu o <b>Pacote Filmes</b>. Iremos providenciar a alteração.");
             WebChat conversa4 = new(4, "103", "Funny: Você escolheu o <b>Pacote Básico</b>. Iremos providenciar a alteração.");
-            WebChat conversa5 = new(5, "02", $"Funny: <h6>Alterar dados cadastrais:</h6>" +
-                        $"<ul><li>201 – Nome</li>" +
-                        $"<li>202 – RG</li>" +
-                        $"<li>203 - CPF</li>" +
-                        $"<li>204 - Telefone</li>" +
-                        $"<li>205 - Endereço</li>" +
-                        $"</ul>");
+            WebChat conversa5 = new(5, "02",resposta2.ToString());
             WebChat conversa6 = new(6, "201", "Funny: Você escolheu o <b> Alteração do Nome</b>.Iremos prosseguir com a alteração.");
             WebChat conversa7 = new(7, "202", "Funny: Você escolheu o <b> Alteração do RG</b>.Iremos prosseguir com a alteração.");
             WebChat conversa8 = new(8, "203", "Funny: Você escolheu o <b> Alteração do CPF</b>.Iremos prosseguir com a alteração.");
             WebChat conversa9 = new(9, "204", "Funny: Você escolheu o <b> Alteração do Telefone</b>.Iremos prosseguir com a alteração.");
             WebChat conversa10 = new(10, "205", "Funny: Você escolheu o <b> Alteração do Endereço</b>.Iremos prosseguir com a alteração.");
             WebChat conversa11 = new(11, "03", "Funny: Iremos enviar um técnico para a instalação do novo ponto.");
-            WebChat conversa12 = new(12, "04", $"Funny: <h6>Informe os seguintes dados para alterar endereço de assinatura:</h6>" +
-                        $"<ul>" +
-                        $"<li> => CEP do Novo Endereço</li>" +
-                        $"<li> => Número da Rua e Dados do Novo Endereço</li>" +
-                        $"<li> => Enviar o Comprovante de Residência</li>" +                       
-                        $"</ul>");
+            WebChat conversa12 = new(12, "04", resposta3.ToString());
             WebChat conversa13 = new(13, "Dados enviados.", "Funny: Endereço da assinatura alterado com sucesso!!");
             WebChat conversa14 = new(14, "05", "Funny: Informe o mês e ano no seguinte formato {mm/yyyy}, para que possamos enviar a seguinda via");
             WebChat conversa15 = new(15, "Mês e ano informados.", "Funny: A segunda via da fatura foi enviada para o e-mail cadastrado.");
@@ -49,7 +62,9 @@ namespace webchatBlazor.Data.Repository
             WebChat conversa18 = new(18, "08", "Funny: Estaremos te encaminhando para algum atendente. Favor aguardar....");          
             WebChat conversa19 = new(19, "Sim", "Funny: Iremos te encaminhar para um atendente, aguarde...");
             WebChat conversa20 = new(20, "Não", "Funny: Obrigado por entrar em contato. Qualquer coisa, estamos a sua disposição.");
-           
+            WebChat conversa21 = new(21, "401", "Funny: Iremos alterar o CEP como solicitado.");
+            WebChat conversa22 = new(21, "402", "Funny: Iremos alterar o endereço como solicitado.");
+            WebChat conversa23 = new(21, "403", "Funny: Recebemos o seu comprovante de residência.");
 
             webChats.Add(conversa1);
             webChats.Add(conversa2);
@@ -71,8 +86,9 @@ namespace webchatBlazor.Data.Repository
             webChats.Add(conversa18);
             webChats.Add(conversa19);
             webChats.Add(conversa20);
-          
-           
+            webChats.Add(conversa21);
+            webChats.Add(conversa22);
+            webChats.Add(conversa23);
 
         }
 
