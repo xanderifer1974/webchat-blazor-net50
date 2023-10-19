@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using System.Text.RegularExpressions;
 using webchatBlazor.Business.Interface.Managers;
 using webchatBlazor.Business.Interface.Repositorios;
@@ -46,8 +47,9 @@ namespace webchatBlazor.Business.Conversas
         {
             WebChat webChat = new();
             Cliente cliente = new();
-            string nome = string.Empty;
-            string resposta = string.Empty;
+            string nome = string.Empty;        
+
+            StringBuilder respostaTratada = new StringBuilder();
 
             if (Regex.IsMatch(Validacao.RetirarPontosETracosCPF(pergunta), @"^\d+$"))
             {
@@ -62,22 +64,21 @@ namespace webchatBlazor.Business.Conversas
                     {
                         nome = cliente.Nome;
 
-                        resposta = $"Funny: <h6>Olá <b>{nome}</b>, escolha uma das opções abaixo.</h6>" +
-                            $"<ul><li>01 – Alterar pacote de canais</li>" +
-                            $"<li>02 – Alterar dados cadastrais</li>" +
-                            $"<li>03 – Solicitar um novo ponto</li>" +
-                            $"<li>04 – Alterar endereço da assinatura</li>" +
-                            $"<li>05 – Solicitar segunda via da fatura</li>" +
-                            $"<li>06 – Renegociar dívida</li>" +
-                            $"<li>07 – Cancelar assinatura</li>" +
-                            $"<li>08 - Falar com um atendente</li></ul>";
+                        respostaTratada.AppendLine("Funny: <h6>Olá <b>" + nome + "</b>, escolha uma das opções abaixo.</h6>");
+                        respostaTratada.AppendLine("<ul><li>01 – Alterar pacote de canais</li>");
+                        respostaTratada.AppendLine("<li>02 – Alterar dados cadastrais</li>");
+                        respostaTratada.AppendLine("<li>03 – Solicitar um novo ponto</li>");
+                        respostaTratada.AppendLine("<li>04 – Alterar endereço da assinatura</li>");
+                        respostaTratada.AppendLine("<li>05 – Solicitar segunda via da fatura</li>");
+                        respostaTratada.AppendLine("<li>06 – Renegociar dívida</li>");
+                        respostaTratada.AppendLine("<li>07 – Cancelar assinatura</li>");
+                        respostaTratada.AppendLine("<li>08 - Falar com um atendente</li></ul>");                       
 
-                        webChat.Resposta = resposta;
+                        webChat.Resposta = respostaTratada.ToString();
                     }
                     else
-                    {
-                        resposta = "Funny: Não encontramos seu CPF em nossas bases de cadastro. Favor verificar o CPF informado.";
-                        webChat.Resposta = resposta;
+                    {                       
+                        webChat.Resposta = "Funny: Não encontramos seu CPF em nossas bases de cadastro. Favor verificar o CPF informado.";
                     }
                 }
                 else
