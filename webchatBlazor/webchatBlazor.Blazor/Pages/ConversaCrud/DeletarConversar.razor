@@ -1,0 +1,26 @@
+﻿@page "/deletarconversa/{id:int}"
+
+<h4>Deseja deletar este cliente com Id : <b>@id</b></h4>
+<br />
+<div class="col-md-8">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Pergunta</th>
+            <td>@(new MarkupString(Conversa.Pergunta))</td>
+        </tr>
+        <tr>
+            <th>Resposta</th>
+            <td>@(new MarkupString(Conversa.Resposta))</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>@Conversa.Status</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <button type="button" class="btn btn-danger" @onclick="@ExcluirConversa">Deletar</button>
+        <button type="button" class="btn btn-warning" @onclick="@Cancela">Cancelar</button>
+    </div>
+</div>
+
+<AlertComponent Model="@Conversa.Alert"></AlertComponent>
