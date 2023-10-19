@@ -51,7 +51,7 @@ namespace webchatBlazor.Business.Conversas
 
             if (Regex.IsMatch(Validacao.RetirarPontosETracosCPF(pergunta), @"^\d+$"))
             {
-                if (Validacao.ValidarCPFFake(pergunta))
+                if (Validacao.ValidarCPFFake(pergunta) && pergunta.Length > 10)
                 {
                     string cpfSemFormatacao = Validacao.RetirarPontosETracosCPF(pergunta);
 
@@ -63,14 +63,14 @@ namespace webchatBlazor.Business.Conversas
                         nome = cliente.Nome;
 
                         resposta = $"Funny: <h6>Olá <b>{nome}</b>, escolha uma das opções abaixo.</h6>" +
-                            $"<ul><li>MN-01 – Alterar pacote de canais</li>" +
-                            $"<li>MN-02 – Alterar dados cadastrais</li>" +
-                            $"<li>MN-03 – Solicitar um novo ponto</li>" +
-                            $"<li>MN-04 – Alterar endereço da assinatura</li>" +
-                            $"<li>MN-05 – Solicitar segunda via da fatura</li>" +
-                            $"<li>MN-06 – Renegociar dívida</li>" +
-                            $"<li>MN-07 – Cancelar assinatura</li>" +
-                            $"<li>MN-08 - Falar com um atendente</li></ul>";
+                            $"<ul><li>01 – Alterar pacote de canais</li>" +
+                            $"<li>02 – Alterar dados cadastrais</li>" +
+                            $"<li>03 – Solicitar um novo ponto</li>" +
+                            $"<li>04 – Alterar endereço da assinatura</li>" +
+                            $"<li>05 – Solicitar segunda via da fatura</li>" +
+                            $"<li>06 – Renegociar dívida</li>" +
+                            $"<li>07 – Cancelar assinatura</li>" +
+                            $"<li>08 - Falar com um atendente</li></ul>";
 
                         webChat.Resposta = resposta;
                     }
